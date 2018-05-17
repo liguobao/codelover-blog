@@ -2,6 +2,9 @@
 layout: post
 title: C#为匿名类型定义局部函数
 category: dotnet
+date: 2016-10-04
+tags:
+- dotnet
 ---
 
 可能是因为我们都习惯于明确定义，一般而言,日常我们很少使用匿名对象。

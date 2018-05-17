@@ -2,9 +2,12 @@
 layout: post
 title: C# join用法
 category: dotnet
+date: 2016-10-04
+tags:
+- dotnet core
 ---
+# Join
 
-# C# Join
  连接：内连接、外连接、左连接、右连接。
 SQL的Join这里就不多说了，
 今天主要是看一下LINQ的Join用法，以及Enumerable.Join()的用法。

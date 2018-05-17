@@ -2,6 +2,9 @@
 layout: post
 title: 一些有用的脚本
 category: sctripts
+date: 2016-10-04
+tags:
+- sctripts
 ---
 # 一些有用的脚本
 

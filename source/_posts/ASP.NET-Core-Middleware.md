@@ -2,6 +2,9 @@
 layout: post
 title: ASP.NET Core 的 Middleware
 category: dotnet core
+date: 2016-10-04
+tags:
+- dotnet core
 ---
 
 在ASP.NET 时代，一般来说我们很少会用到HttpModule/HttpHandler，然而有些场景我们使用HttpModule/HttpHandler倒方便快捷完成我们的需求。有兴趣了解HttpModule/HttpHandler以及使用场景的话，可以看下面这个链接的内容。

@@ -2,6 +2,9 @@
 layout: post
 title: ASP.NET core 初体验
 category: dotnet core
+date: 2016-10-04
+tags:
+- dotnet core
 ---
 
 在大神的带领下体验了一下asp.net core，感觉很不错，简单写个手把手教程。

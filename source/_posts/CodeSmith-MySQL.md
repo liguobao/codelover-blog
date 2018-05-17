@@ -2,6 +2,9 @@
 layout: post
 title: CodeSmith for MySQL template
 category: CodeSmith
+date: 2016-10-04
+tags:
+- dotnet
 ---
 
 

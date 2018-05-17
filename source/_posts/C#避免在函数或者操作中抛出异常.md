@@ -2,6 +2,10 @@
 layout: post
 title: C#避免在函数或者操作中抛出异常
 category: dotnet
+date: 2016-10-04
+tags:
+- dotnet core
+- dotnet
 ---
 # C#避免在函数或者操作中抛出异常
 

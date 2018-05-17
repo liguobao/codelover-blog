@@ -7,8 +7,8 @@ tags:
 - javascript
 - requirejs
 ---
+# 写在前面
 
-### 写在前面
 最早接触javascript的时候，javascript代码直接扔在script标签里面就完事了。
 
 反正代码不多，交互简单，逻辑不难，和HTML混在一起也未尝不可。

@@ -2,6 +2,10 @@
 layout: post
 title: 58同城高德搜房项目JS相关知识
 category: JavaScript
+date: 2016-10-04
+tags:
+- asp.net core
+- 58City
 ---
 # 58同城高德搜房项目JS相关知识
 

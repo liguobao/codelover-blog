@@ -2,6 +2,9 @@
 layout: post
 title: byte to string
 category: dotnet
+date: 2016-10-04
+tags:
+- dotnet core
 ---
 
 有时候我们会遇到需要把数据加密之后再网络上传输的需求，这样的话一般使用AES256之类的算法，经过运算之后得到一个byte数组，接着转换成string，就扔出去了。对方拿到之后，用密钥解密之后便得到了对应的数据。

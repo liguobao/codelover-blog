@@ -2,9 +2,10 @@
 layout: post
 title: C#-58同城品牌公寓爬虫
 category: dotnet core
+date: 2016-10-04
+tags:
+- dotnet core
 ---
-
-
 周末闲着无事刷知乎发现一个爬虫教程（[高德API+Python解决租房问题](https://zhuanlan.zhihu.com/p/21883516)
 ），正中最近想要换地方住的痛点。然后大早上懒觉都没睡就屁颠屁颠开始研究这个教程了。这样教程在实验楼网站里面有手把手步骤，有兴趣自取（[实验楼：高德API+Python解决租房问题](https://www.shiyanlou.com/courses/599)）。
 

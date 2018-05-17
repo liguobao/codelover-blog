@@ -2,6 +2,9 @@
 layout: post
 title: mono webreques https exception
 category: dotnet
+date: 2016-10-04
+tags:
+- dotnet
 ---
 
 

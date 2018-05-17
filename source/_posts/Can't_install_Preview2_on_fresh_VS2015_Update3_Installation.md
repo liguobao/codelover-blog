@@ -2,6 +2,10 @@
 layout: post
 title : Microsoft .NET Core 1.0.0 VS 2015 Tooling Preview 2 0x80070003
 category: dotnet core
+date: 2016-10-04
+tags:
+- dotnet core
+- dotnet
 ---
 
 最近安装Microsoft .NET Core 1.0.0 VS 2015 Tooling Preview 2实在有点曲折，忍不住写个文章来讲这货的坑爹之旅了。

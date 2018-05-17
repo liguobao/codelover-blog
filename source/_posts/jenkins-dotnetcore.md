@@ -2,7 +2,11 @@
 layout: post
 title: 手把手教你用Jenkins自动发布dotnet core网站
 category: dotnet core
-date: 2018-05-08 00:00:00
+date: 2018-05-08
+tags:
+- dotnet core
+- Jenkins
+- docker
 ---
 # Jenkins部分
 

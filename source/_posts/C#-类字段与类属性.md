@@ -2,6 +2,9 @@
 layout: post
 title: C#类字段与类属性
 category: dotnet
+date: 2016-10-04
+tags:
+- dotnet core
 ---
 # C# 类字段与类属性
 

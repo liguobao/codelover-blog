@@ -2,6 +2,9 @@
 layout: post
 title: dotnet lmabda避免修改绑定变量
 category: dotnet
+date: 2016-10-04
+tags:
+- dotnet 
 ---
 
 先看一段代码

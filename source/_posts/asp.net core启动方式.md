@@ -2,6 +2,9 @@
 layout: post
 title: ASP.NET Core 启动方式（Hosting）
 category: dotnet core
+date: 2016-10-04
+tags:
+- dotnet core
 ---
 # ASP.NET Core 启动方式（Hosting）
 

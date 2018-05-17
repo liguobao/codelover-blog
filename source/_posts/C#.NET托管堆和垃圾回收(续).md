@@ -2,6 +2,9 @@
 layout: post
 title: C#.NET托管堆和垃圾回收(续)
 category: dotnet
+date: 2016-10-04
+tags:
+- dotnet
 ---
 # 托管堆和垃圾回收(续)
 
