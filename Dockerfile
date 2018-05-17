@@ -1,8 +1,8 @@
 FROM node:latest AS build-env
 RUN mkdir -p /usr/src/hexo-blog
 WORKDIR /usr/src/hexo-blog
-RUN npm --registry=https://registry.npm.taobao.org install hexo-cli -g
 COPY . .
+RUN npm --registry=https://registry.npm.taobao.org install hexo-cli -g && npm install
 RUN hexo clean && hexo g
 
 #RUN npm install install hexo-cli -g && npm install && hexo g
