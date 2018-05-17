@@ -1,7 +1,7 @@
 ---
 layout: post
 title: C#避免在函数或者操作中抛出异常
-category: .net
+category: dotnet
 ---
 # C#避免在函数或者操作中抛出异常
 

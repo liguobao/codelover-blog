@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="asp.net core,58City," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="58HouseSearch项目迁移到asp.net core58HouseSearch这个项目原本是基于ASP.NET MVC 4写的，开发环境是Windows+VS2015，发布平台是linux+mono+jexus，这样看来整个项目基本已经满足跨平台的需求。 这样一来，本来我是没什么动力去做迁移的，好好的东西闲着没事干才迁移呢。 不过，这不国庆了么？穷人不是在家穷游天下么？所以…真的有点闲着没">
+<meta name="keywords" content="asp.net core,58City">
+<meta property="og:type" content="article">
+<meta property="og:title" content="58HouseSearch项目迁移到asp.net core">
+<meta property="og:url" content="http://codelover.link/2016/10/04/58CityHouseSearch_move_to_aspnetcore/index.html">
+<meta property="og:site_name" content="codelover">
+<meta property="og:description" content="58HouseSearch项目迁移到asp.net core58HouseSearch这个项目原本是基于ASP.NET MVC 4写的，开发环境是Windows+VS2015，发布平台是linux+mono+jexus，这样看来整个项目基本已经满足跨平台的需求。 这样一来，本来我是没什么动力去做迁移的，好好的东西闲着没事干才迁移呢。 不过，这不国庆了么？穷人不是在家穷游天下么？所以…真的有点闲着没">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://7xread.com1.z0.glb.clouddn.com/1a950803-3d38-4b16-9761-6c9cd806b0b9">
+<meta property="og:image" content="http://7xread.com1.z0.glb.clouddn.com/1e723e08-b3d5-4dab-b4a6-1de70799c4c8">
+<meta property="og:image" content="http://7xread.com1.z0.glb.clouddn.com/706771d8-d3f2-4122-a61d-5e961887121a">
+<meta property="og:image" content="http://7xread.com1.z0.glb.clouddn.com/455ec5cc-b429-4563-a4fb-3a0c18608969">
+<meta property="og:image" content="http://7xread.com1.z0.glb.clouddn.com/47c517d1-4b48-4088-be4a-a0768413e768">
+<meta property="og:image" content="http://7xread.com1.z0.glb.clouddn.com/3364e7c9-a41e-47f2-8d08-60345e4efa35">
+<meta property="og:image" content="http://7xread.com1.z0.glb.clouddn.com/e047d81d-56f1-4e51-9d72-7989e1fc6225">
+<meta property="og:image" content="http://7xread.com1.z0.glb.clouddn.com/2fee156b-2505-4953-bfe9-1d2521f13565">
+<meta property="og:image" content="http://7xread.com1.z0.glb.clouddn.com/d005a100-e3e6-423b-b34c-3eae11b2ab63">
+<meta property="og:image" content="http://7xread.com1.z0.glb.clouddn.com/6ebca12e-2be9-487e-b230-d22562a5aabe">
+<meta property="og:image" content="http://7xread.com1.z0.glb.clouddn.com/a3192bdf-f548-4fad-868a-4865632acd29">
+<meta property="og:image" content="http://7xread.com1.z0.glb.clouddn.com/b1191226-c33b-45c7-98cc-f62bb3ea73b4">
+<meta property="og:updated_time" content="2018-05-17T08:19:44.703Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="58HouseSearch项目迁移到asp.net core">
+<meta name="twitter:description" content="58HouseSearch项目迁移到asp.net core58HouseSearch这个项目原本是基于ASP.NET MVC 4写的，开发环境是Windows+VS2015，发布平台是linux+mono+jexus，这样看来整个项目基本已经满足跨平台的需求。 这样一来，本来我是没什么动力去做迁移的，好好的东西闲着没事干才迁移呢。 不过，这不国庆了么？穷人不是在家穷游天下么？所以…真的有点闲着没">
+<meta name="twitter:image" content="http://7xread.com1.z0.glb.clouddn.com/1a950803-3d38-4b16-9761-6c9cd806b0b9">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://codelover.link/2016/10/04/58CityHouseSearch_move_to_aspnetcore/"/>
+
+
+
+
+
+  <title>58HouseSearch项目迁移到asp.net core | codelover</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">codelover</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://codelover.link/2016/10/04/58CityHouseSearch_move_to_aspnetcore/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李国宝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="codelover">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">58HouseSearch项目迁移到asp.net core</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-04T00:00:00+08:00">
+                2016-10-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/asp-net-core/" itemprop="url" rel="index">
+                    <span itemprop="name">asp.net core</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="58HouseSearch项目迁移到asp-net-core"><a href="#58HouseSearch项目迁移到asp-net-core" class="headerlink" title="58HouseSearch项目迁移到asp.net core"></a>58HouseSearch项目迁移到asp.net core</h1><p><a href="https://github.com/liguobao/58HouseSearch" target="_blank" rel="noopener">58HouseSearch</a>这个项目原本是基于ASP.NET MVC 4写的，开发环境是Windows+VS2015，发布平台是linux+mono+jexus，这样看来整个项目基本已经满足跨平台的需求。</p>
+<p>这样一来，本来我是没什么动力去做迁移的，好好的东西闲着没事干才迁移呢。</p>
+<p>不过，这不国庆了么？穷人不是在家穷游天下么？所以…真的有点闲着没事干了。</p>
+<h2 id="迁移可行性探讨"><a href="#迁移可行性探讨" class="headerlink" title="迁移可行性探讨"></a>迁移可行性探讨</h2><p>项目迁移前，我们还是先来讨论一下迁移可行性。为嘛要进行可行性探讨呢？原因是.NET CORE是一个跨平台的框架，和上一代的.NET存在不兼容。</p>
+<p>个人总结一下，迁移的主要的问题在于：代码不兼容、类库不兼容、严重依赖Windows API或者COM组件等。</p>
+<h2 id="代码不兼容"><a href="#代码不兼容" class="headerlink" title="代码不兼容"></a>代码不兼容</h2><p>代码不兼容其实不算麻烦。毕竟代码是活的，你我也是活的，不就是一个改字罢了。花点时间慢慢改，总是能搞掂的。</p>
+<ul>
+<li><p>类库不兼容,要不就弃用，要不就找替代品。</p>
+</li>
+<li><p>严重依赖Windows API或者COM组件</p>
+<p>  额？找替代品，找不到可用替代品的话。放弃吧，这个项目别考虑迁移了。</p>
+<p>  这个故事告诉我们，做跨平台项目的时候，少点用系统API或者组建。</p>
+</li>
+</ul>
+<p>回到58HouseSearch项目上面。</p>
+<p>这个项目的代码基本都是我写的，所以重写代码没什么问题。<br>依赖的类库有下面几个:</p>
+<ul>
+<li><p><a href="https://github.com/FlorianRappl/AngleSharp" target="_blank" rel="noopener">AngleSharp</a></p>
+</li>
+<li><p><a href="http://www.newtonsoft.com/json" target="_blank" rel="noopener">Newtonsoft.Json</a></p>
+</li>
+<li><p><a href="http://logging.apache.org/log4net/" target="_blank" rel="noopener">log4net</a></p>
+</li>
+</ul>
+<p>AngleSharp是用来解析HTML的类库，用linq的方式来操作HTML，用起来实在爽快。</p>
+<p>如果这货在.net core上不能跑，我应该立马放弃了。<br>不过，这个实在给力…</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/1a950803-3d38-4b16-9761-6c9cd806b0b9" alt="AngleSharp支持平台"></p>
+<p>Newtonsoft.Json</p>
+<p>在这个项目里面主要是用来记录PV数据的，非核心功能，可有可无。不过看了下nuget上的介绍，也是支持.net core的。</p>
+<p>剩下log4net…嗯，并不支持log4net。不过这个就更加是非核心内容了，直接丢了。<br>PS:考虑后期加入Nlog替代log4net。</p>
+<p>至于依赖Windows API之类的，在这个项目里面基本没有，所以略过…</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
+<li><a href="https://www.visualstudio.com/downloads/" target="_blank" rel="noopener">Visual Studio Community 2015 with Update 3 – Free</a></li>
+<li><a href="https://www.microsoft.com/net/download" target="_blank" rel="noopener">.NET Core SDK</a></li>
+<li><a href="https://www.microsoft.com/net/download" target="_blank" rel="noopener">.NET Core</a></li>
+<li><a href="https://go.microsoft.com/fwlink/?LinkId=827546" target="_blank" rel="noopener">.NET Core 1.0.1 - VS 2015 Tooling Preview 2</a></li>
+</ul>
+<p>友情提示：</p>
+<ol>
+<li>Visual Studio Community 2015 with Update 3 下载镜像来安装。</li>
+</ol>
+<p>错误操作如下：<br><img src="http://7xread.com1.z0.glb.clouddn.com/1e723e08-b3d5-4dab-b4a6-1de70799c4c8" alt="错误操作"></p>
+<p>正确打开方式：</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/706771d8-d3f2-4122-a61d-5e961887121a" alt="正确的打开方式-1"></p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/455ec5cc-b429-4563-a4fb-3a0c18608969" alt="正确的打开方式-2"></p>
+<ol start="2">
+<li><p>安装.NET Core SDK和.NET Core之后再安装.NET Core 1.0.1 - VS 2015 Tooling Preview 2</p>
+</li>
+<li><p>安装.NET Core 1.0.1 - VS 2015 Tooling Preview 2 这货的可能会报错0x80072f8a未指定的错误</p>
+</li>
+</ol>
+<p>解决方案见下图：</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/47c517d1-4b48-4088-be4a-a0768413e768" alt="图片描述"></p>
+<p>详细见链接：<a href="http://www.cnblogs.com/JiaoWoWeiZai/p/5892255.html" target="_blank" rel="noopener">安装DotNetCore.1.0.1-VS2015Tools.Preview2.0.2出现0x80072f8a未指定的错误</a></p>
+<p>上面都弄好之后，理论上在VS2O15-新建项目里面可以看到ASP.NET CORE的模板了。如下图：<br><img src="http://7xread.com1.z0.glb.clouddn.com/3364e7c9-a41e-47f2-8d08-60345e4efa35" alt="ASP.NET CORE的模板"></p>
+<h3 id="项目迁移"><a href="#项目迁移" class="headerlink" title="项目迁移"></a>项目迁移</h3><h4 id="新建空白ASP-NET-CORE项目"><a href="#新建空白ASP-NET-CORE项目" class="headerlink" title="新建空白ASP.NET CORE项目"></a>新建空白ASP.NET CORE项目</h4><p>新建好了之后如下图：</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/e047d81d-56f1-4e51-9d72-7989e1fc6225" alt="空白ASP.NET CORE项目"></p>
+<h4 id="Nuget获取引用"><a href="#Nuget获取引用" class="headerlink" title="Nuget获取引用"></a>Nuget获取引用</h4><p><a href="https://www.nuget.org/packages/AngleSharp/" target="_blank" rel="noopener">https://www.nuget.org/packages/AngleSharp/</a></p>
+<p><a href="https://www.nuget.org/packages/Newtonsoft.Json" target="_blank" rel="noopener">https://www.nuget.org/packages/Newtonsoft.Json</a></p>
+<h4 id="添加Controllers文件夹"><a href="#添加Controllers文件夹" class="headerlink" title="添加Controllers文件夹"></a>添加Controllers文件夹</h4><p>然后把之前项目的Controllers拷贝过来，改掉命名空间，去掉无用代码，添加相应引用。</p>
+<h4 id="添加Views文件夹"><a href="#添加Views文件夹" class="headerlink" title="添加Views文件夹"></a>添加Views文件夹</h4><p>本项目直接把之前项目的Views拷贝过来是完全没有问题的。</p>
+<h4 id="静态文件处理"><a href="#静态文件处理" class="headerlink" title="静态文件处理"></a>静态文件处理</h4><p>asp.net core MVC中的文件结构和asp.net mvc的文件结构略有不同。</p>
+<p>asp.net core MVC在view中“IMG/Little/PaleGreen.png”对应的文件对应于“项目路径/webroot/IMG/Little/PaleGreen.png”；</p>
+<p>而asp.net mvc中，对应路径为“项目/IMG/Little/PaleGreen.png”。</p>
+<p>因而，我们的所有静态文件都应该放到：webroot文件夹下。</p>
+<p>上面的都做完了之后，项目结构如下：</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/2fee156b-2505-4953-bfe9-1d2521f13565" alt="项目结构"></p>
+<p>接下来就是改代码了。</p>
+<h3 id="代码迁移"><a href="#代码迁移" class="headerlink" title="代码迁移"></a>代码迁移</h3><h4 id="Startup-cs添加MVC"><a href="#Startup-cs添加MVC" class="headerlink" title="Startup.cs添加MVC"></a>Startup.cs添加MVC</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public class Startup</span><br><span class="line">&#123;</span><br><span class="line">    // This method gets called by the runtime. Use this method to add services to the container.</span><br><span class="line">    // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940</span><br><span class="line">    public void ConfigureServices(IServiceCollection services)</span><br><span class="line">    &#123;</span><br><span class="line">        //添加MVC框架</span><br><span class="line">        services.AddMvc();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.</span><br><span class="line">    public void Configure(IApplicationBuilder app, IHostingEnvironment env,</span><br><span class="line">    ILoggerFactory loggerFactory)</span><br><span class="line">    &#123;</span><br><span class="line">        loggerFactory.AddConsole();</span><br><span class="line"></span><br><span class="line">        if (env.IsDevelopment())</span><br><span class="line">        &#123;</span><br><span class="line">            app.UseDeveloperExceptionPage();</span><br><span class="line">        &#125;</span><br><span class="line">        //启用静态文件中间件</span><br><span class="line">        app.UseStaticFiles();</span><br><span class="line">        //启动MVC路由</span><br><span class="line">        app.UseMvcWithDefaultRoute();</span><br><span class="line">        //设置默认页面</span><br><span class="line">        app.UseMvc(routes =&gt;</span><br><span class="line">        &#123;</span><br><span class="line">            routes.MapRoute(</span><br><span class="line">                name: &quot;default&quot;,</span><br><span class="line">                template: &quot;&#123;controller=House&#125;/&#123;action=Index&#125;/&#123;id?&#125;&quot;); </span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="改写GetHTMLByURL方法"><a href="#改写GetHTMLByURL方法" class="headerlink" title="改写GetHTMLByURL方法"></a>改写GetHTMLByURL方法</h4><p>之前的方法：</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/d005a100-e3e6-423b-b34c-3eae11b2ab63" alt="old GetHTMLByURL"></p>
+<p>.net core重写了HttpWebRequest，变成了WebRequest,所以上面的代码废了。</p>
+<p>重写如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public static string GetHTMLByURL(string Url, string type = &quot;UTF-8&quot;)</span><br><span class="line">&#123;</span><br><span class="line">    try</span><br><span class="line">    &#123;</span><br><span class="line">        Url = Url.ToLower();</span><br><span class="line"></span><br><span class="line">        System.Net.WebRequest wReq = System.Net.WebRequest.Create(Url);</span><br><span class="line">        // Get the response instance.</span><br><span class="line">        System.Net.WebResponse wResp = wReq.GetResponseAsync().Result;</span><br><span class="line">        System.IO.Stream respStream = wResp.GetResponseStream();</span><br><span class="line">        using (System.IO.StreamReader reader = new System.IO.</span><br><span class="line">        StreamReader(respStream, Encoding.GetEncoding(type)))</span><br><span class="line">        &#123;</span><br><span class="line">            return reader.ReadToEnd();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    catch (System.Exception ex)</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        return string.Empty;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="改写Controller代码"><a href="#改写Controller代码" class="headerlink" title="改写Controller代码"></a>改写Controller代码</h4><p>嗯，换了命名空间，别的一句都没改直接拉过来了…略过。</p>
+<h3 id="发布到ubuntu"><a href="#发布到ubuntu" class="headerlink" title="发布到ubuntu"></a>发布到ubuntu</h3><p><a href="https://www.microsoft.com/net/core#ubuntu" target="_blank" rel="noopener">Install for Ubuntu 14.04, 16.04 &amp; Linux Mint 17</a></p>
+<p>第一步</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//Ubuntu 14.04 / Linux Mint 17</span><br><span class="line">sudo sh -c <span class="string">'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" &gt; /etc/apt/sources.list.d/dotnetdev.list'</span></span><br><span class="line">sudo apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893</span><br><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//Ubuntu 16.04</span><br><span class="line">sudo sh -c <span class="string">'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ xenial main" &gt; /etc/apt/sources.list.d/dotnetdev.list'</span></span><br><span class="line">sudo apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893</span><br><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+<p>第二步</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install dotnet-dev-1.0.0-preview2-003131</span><br></pre></td></tr></table></figure>
+<p>安装好了之后，输入 dotnet -v 应该能看到版本信息，如下图：</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/6ebca12e-2be9-487e-b230-d22562a5aabe" alt="dotnet -v "></p>
+<p>这样的下，一句完成了ubuntu 运行asp.net core的环境搭建了。</p>
+<h3 id="project-json里面隐藏的坑"><a href="#project-json里面隐藏的坑" class="headerlink" title="project.json里面隐藏的坑"></a>project.json里面隐藏的坑</h3><h4 id="dependencies"><a href="#dependencies" class="headerlink" title="dependencies"></a>dependencies</h4><p>NET Core 1.0.1 - VS 2015 Tooling Preview 2模板的asp.net core 版本和ubuntu 的asp.net core 版本不一致。</p>
+<p>根据微软爸给的教程，我们在ubuntu上安装的.NET Core 1.0.0，见上图。</p>
+<p>然而我们创建项目的模板是.NET Core 1.0.1，见下图:</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/a3192bdf-f548-4fad-868a-4865632acd29" alt=".NET Core 1.0.1"></p>
+<p>怎么办？要不升级ubuntu的asp.net core，要不降级。</p>
+<p>由于没找到.NET Core 1.0.1 ubuntu的安装包，所以我选择了降级到.NET Core 1.0.0.</p>
+<p>其中需要把Microsoft.NETCore.App version 、Microsoft.AspNetCore.Server.Kestrel、Microsoft.AspNetCore.Mvc 这三个节点都改成“1.0.0”。如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">"dependencies": &#123;</span><br><span class="line">  "Microsoft.NETCore.App": &#123;</span><br><span class="line">    "version": "1.0.1",</span><br><span class="line">    "type": "platform"</span><br><span class="line">  &#125;,</span><br><span class="line">  "Microsoft.AspNetCore.Diagnostics": "1.0.0",</span><br><span class="line">  "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",</span><br><span class="line">  "Microsoft.AspNetCore.Server.Kestrel": "1.0.1",</span><br><span class="line">  "Microsoft.Extensions.Logging.Console": "1.0.0",</span><br><span class="line">  "Microsoft.AspNetCore.Mvc": "1.0.1",</span><br><span class="line">  "Microsoft.AspNetCore.StaticFiles": "1.0.0",</span><br><span class="line">  "Newtonsoft.Json": "9.0.1",</span><br><span class="line">  "AngleSharp": "0.9.8.1"</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<h4 id="publishOptions"><a href="#publishOptions" class="headerlink" title="publishOptions"></a>publishOptions</h4><p>发布输出包括Views文件夹</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"publishOptions"</span>: &#123;</span><br><span class="line">  <span class="string">"include"</span>: [</span><br><span class="line">    <span class="string">"wwwroot"</span>,</span><br><span class="line">    <span class="string">"web.config"</span>,</span><br><span class="line">    <span class="string">"Views"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<h4 id="runtimes"><a href="#runtimes" class="headerlink" title="runtimes"></a>runtimes</h4><p>runtimes 配置为模板运行平台。<br>详细见链接：<a href="https://docs.nuget.org/ndocs/schema/project.json" target="_blank" rel="noopener">https://docs.nuget.org/ndocs/schema/project.json</a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"runtimes": &#123; "ubuntu.14.04-x64": &#123;&#125; &#125;</span><br></pre></td></tr></table></figure>
+<p>上面都弄好之后，跑一下看,如下图：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dotnet restore</span><br><span class="line"></span><br><span class="line">dotnet run</span><br></pre></td></tr></table></figure>
+<p>来个请求看看：</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/b1191226-c33b-45c7-98cc-f62bb3ea73b4" alt="请求log"></p>
+<h3 id="jexus转发-反向代理"><a href="#jexus转发-反向代理" class="headerlink" title="jexus转发/反向代理"></a>jexus转发/反向代理</h3><p><a href="http://www.cnblogs.com/gaobing/p/5663012.html" target="_blank" rel="noopener">ASP.NET Core “完整发布,自带运行时” 到jexus</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/asp-net-core/" rel="tag"># asp.net core</a>
+          
+            <a href="/tags/58City/" rel="tag"># 58City</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/13/58CityHouseSearch-JS/" rel="next" title="58同城高德搜房项目JS相关知识">
+                <i class="fa fa-chevron-left"></i> 58同城高德搜房项目JS相关知识
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/04/ipproy_for_crawler/" rel="prev" title="可能是一份没什么用的爬虫代理IP指南">
+                可能是一份没什么用的爬虫代理IP指南 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">李国宝</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/liguobao" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#58HouseSearch项目迁移到asp-net-core"><span class="nav-number">1.</span> <span class="nav-text">58HouseSearch项目迁移到asp.net core</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#迁移可行性探讨"><span class="nav-number">1.1.</span> <span class="nav-text">迁移可行性探讨</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码不兼容"><span class="nav-number">1.2.</span> <span class="nav-text">代码不兼容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">1.2.1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目迁移"><span class="nav-number">1.2.2.</span> <span class="nav-text">项目迁移</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#新建空白ASP-NET-CORE项目"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">新建空白ASP.NET CORE项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Nuget获取引用"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">Nuget获取引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加Controllers文件夹"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">添加Controllers文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加Views文件夹"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">添加Views文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#静态文件处理"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">静态文件处理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码迁移"><span class="nav-number">1.2.3.</span> <span class="nav-text">代码迁移</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Startup-cs添加MVC"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">Startup.cs添加MVC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#改写GetHTMLByURL方法"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">改写GetHTMLByURL方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#改写Controller代码"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">改写Controller代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发布到ubuntu"><span class="nav-number">1.2.4.</span> <span class="nav-text">发布到ubuntu</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#project-json里面隐藏的坑"><span class="nav-number">1.2.5.</span> <span class="nav-text">project.json里面隐藏的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#dependencies"><span class="nav-number">1.2.5.1.</span> <span class="nav-text">dependencies</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#publishOptions"><span class="nav-number">1.2.5.2.</span> <span class="nav-text">publishOptions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#runtimes"><span class="nav-number">1.2.5.3.</span> <span class="nav-text">runtimes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jexus转发-反向代理"><span class="nav-number">1.2.6.</span> <span class="nav-text">jexus转发/反向代理</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">李国宝</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

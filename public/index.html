@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -80,12 +80,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="default">
+<meta property="og:title" content="codelover">
+<meta property="og:url" content="http://codelover.link/index.html">
+<meta property="og:site_name" content="codelover">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="codelover">
 
 
 
@@ -93,7 +93,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -101,7 +101,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -115,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://codelover.link/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>codelover</title>
   
 
 
@@ -133,7 +133,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -152,7 +152,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">codelover</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -182,7 +182,27 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -192,7 +212,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
           </a>
         </li>
       
@@ -229,16 +259,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/17/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://codelover.link/2018/05/08/jenkins-dotnetcore/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="李国宝">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="codelover">
     </span>
 
     
@@ -248,7 +278,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/17/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2018/05/08/jenkins-dotnetcore/" itemprop="url">手把手教你用Jenkins自动发布dotnet core网站</a></h1>
         
 
         <div class="post-meta">
@@ -258,10 +288,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-17T15:23:49+08:00">
-                2018-05-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-08T00:00:00+08:00">
+                2018-05-08
               </time>
             
 
@@ -270,6 +300,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/dotnet-core/" itemprop="url" rel="index">
+                    <span itemprop="name">dotnet core</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -300,16 +352,1645 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <h1 id="Jenkins部分"><a href="#Jenkins部分" class="headerlink" title="Jenkins部分"></a>Jenkins部分</h1><p>首先,我们要有个Jenkins咯,下载链接:<a href="https://jenkins.io/download/" target="_blank" rel="noopener">https://jenkins.io/download/</a></p>
+<p>我们安装官网教程安装好jenkins,安装教程略….</p>
+<p>嗯?不是说好手把手么?你妹的.</p>
+<p>好好好,我们还是来手把手教程好了.</p>
+<h2 id="首先安装JDK8"><a href="#首先安装JDK8" class="headerlink" title="首先安装JDK8"></a>首先安装JDK8</h2><p>添加安装源之后直接apt-get install就好,下面是ubuntu的安装命令,其他系统自己玩一下就好.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sudo add-apt-repository ppa:webupd8team/java</span><br><span class="line"></span><br><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line">sudo apt-get install oracle-java8-installer</span><br></pre></td></tr></table></figure>
+<h2 id="下载jenkins-war-启动Jenkins"><a href="#下载jenkins-war-启动Jenkins" class="headerlink" title="下载jenkins.war + 启动Jenkins"></a>下载jenkins.war + 启动Jenkins</h2><p>下载链接:<a href="http://mirrors.jenkins.io/war-stable/" target="_blank" rel="noopener">http://mirrors.jenkins.io/war-stable/</a></p>
+<p>在这里面找最新的下载,我当前最新的应该是<a href="http://mirrors.jenkins.io/war-stable/2.107.2/jenkins.war" target="_blank" rel="noopener">2.107.2</a></p>
+<p>下载好了jenkins.war之后,在当前目录创建一个jenkins-home文件夹,设置JENKINS_HOME环境变量为jenkins-home(不设置也可以,默认在~/.jenkins)</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">wget http://mirrors.jenkins.io/war-stable/2.107.2/jenkins.war;</span><br><span class="line">mkdir ~/jenkins-home;</span><br><span class="line"><span class="built_in">export</span> JENKINS_HOME=~/jenkins-home;</span><br><span class="line">tmux;</span><br><span class="line">java -jar jenkins.war</span><br></pre></td></tr></table></figure>
+<p>一般建议开个后台进程来跑jenkins,免得终端退出之后jenkins就死掉了.</p>
+<p>所以上面我先打开了tmux之后再跑java -jar jenkins.war.</p>
+<p>如下图:<br><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%886.53.24.png" alt="jenkins启动"></p>
+<p>接着留意一下initialAdminPassword的输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Jenkins initial setup is required. An admin user has been created and a password generated.</span><br><span class="line">Please use the following password to proceed to installation:</span><br><span class="line"></span><br><span class="line">XXXXXXXXXXXXXX</span><br><span class="line"></span><br><span class="line">This may also be found at: /root/jenkins-home/secrets/initialAdminPassword</span><br></pre></td></tr></table></figure>
+<p>这个时候访问当前主机的8080端口已经可以看到jenkins正在启动了,稍等片刻就可以看到jenkins登录页.</p>
+<p>这个时候把上面的XXXXXXXXXXXXXX复制出来,输进去点击继续配置jenkins账号密码信息之类的.</p>
+<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%886.58.58.png" alt="配置jenkins"></p>
+<p>接着安装默认插件.</p>
+<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%887.00.12.png" alt="安装插件"></p>
+<p>这里估计也要等几分钟不等,看你的机器性能和网络速度.</p>
+<p>安装好了之后会进入配置登录账号密码,安装提示配置就完事.</p>
+<p>最后进入jenkins页面是这样的.<br><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%887.02.42.png" alt="jenkins"></p>
+<p>到现在我们已经把jenkins跑起来了,也有了一些常用的插件.</p>
+<p>我们先去把dotnet core docker 编译发布相关的东西弄好之后再回来继续做jenkins任务.</p>
+<h2 id="dotnet-core-docker-打包"><a href="#dotnet-core-docker-打包" class="headerlink" title="dotnet core docker 打包"></a>dotnet core docker 打包</h2><p>在项目目录下新建Dockerfile文件,内容如下:</p>
+<figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">FROM</span> microsoft/aspnetcore-build:<span class="number">2.0</span> AS build-<span class="keyword">env</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /app</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># copy csproj and restore as distinct layers</span></span></span><br><span class="line"><span class="bash">COPY *.csproj ./</span></span><br><span class="line"><span class="bash">RUN dotnet restore</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># copy everything else and build</span></span></span><br><span class="line"><span class="bash">COPY . ./</span></span><br><span class="line"><span class="bash">RUN dotnet publish -c Release -o out</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># build runtime image</span></span></span><br><span class="line"><span class="bash">FROM microsoft/aspnetcore:2.0</span></span><br><span class="line"><span class="bash">WORKDIR /app</span></span><br><span class="line"><span class="bash">COPY --from=build-env /app/out .</span></span><br><span class="line"><span class="bash">ENTRYPOINT [<span class="string">"dotnet"</span>, <span class="string">"你的dotnet core程序.dll"</span>]</span></span><br></pre></td></tr></table></figure>
+<p>这个Dockerfile基本就是把当前目录的文件拷贝到aspnetcore-build镜像中,再里面编译好之后再发布到aspnetcore:2.0镜像中,</p>
+<p>最后指定运行你的dotnet core程序</p>
+<p>来源:<a href="https://github.com/DaoCloud/dotnet-docker-samples" target="_blank" rel="noopener">https://github.com/DaoCloud/dotnet-docker-samples</a></p>
+<h2 id="docker-build-run-脚本-非必须-可以使用jenkins中脚本编译替代"><a href="#docker-build-run-脚本-非必须-可以使用jenkins中脚本编译替代" class="headerlink" title="docker build + run 脚本(非必须,可以使用jenkins中脚本编译替代)"></a>docker build + run 脚本(非必须,可以使用jenkins中脚本编译替代)</h2><p>以<a href="https://github.com/liguobao/58HouseSearch/blob/master/HouseCrawler.Core/HouseCrawler.Web/" target="_blank" rel="noopener">HouseCrawler.Web</a>为例,</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line">image_version=`date +%Y%m%d%H%M`;</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$image_version</span>;</span><br><span class="line"><span class="built_in">cd</span> ~/code/58HouseSearch/HouseCrawler.Core/HouseCrawler.Web;</span><br><span class="line">git pull --rebase origin master;</span><br><span class="line">docker stop house-web;</span><br><span class="line">docker rm house-web;</span><br><span class="line">docker build -t house-web:<span class="variable">$image_version</span> .;</span><br><span class="line">docker images;</span><br><span class="line">docker run -p 8080:80 -v ~/docker-data/house-web/appsettings.json:/app/appsettings.json -v ~/docker-data/house-web/NLogFile/:/app/NLogFile  --restart=always --name house-web -d house-web:<span class="variable">$image_version</span>;</span><br><span class="line">docker logs house-web;</span><br></pre></td></tr></table></figure>
+<p>通过上面这个build+run脚本,我们已经把dotnet core程序编译好了,并且打包成了docker images,还直接跑起来了.</p>
+<p>但是我们想要的应该是自动化编译部署,而且上面我们都把jenkins跑起来了,所以….</p>
+<h2 id="jenkins-job配置"><a href="#jenkins-job配置" class="headerlink" title="jenkins job配置"></a>jenkins job配置</h2><h3 id="新建Job"><a href="#新建Job" class="headerlink" title="新建Job"></a>新建Job</h3><p>打开jenkins首页,左侧选择”新建任务”(newJob),如下图:</p>
+<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.10.00.png" alt="newJob"></p>
+<p>给新的job取个名字,然后选择”构建自由风格的软件项目”,如图:</p>
+<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.12.27.png" alt="构建自由风格的软件项目"></p>
+<h3 id="添加源码仓库"><a href="#添加源码仓库" class="headerlink" title="添加源码仓库"></a>添加源码仓库</h3><p>确认之后进入Job配置页面,源码管理里面选择git,如图:<br><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.14.06.png" alt="源码管理"></p>
+<p>如果git仓库是需要权限的话需要配置一下权限,我一般简单粗暴直接把jenkins主机的公钥添加到git仓库里面,所以这里直接配置成’From the Jenkins master ~/.ssh’,也可以用账号密码访问等等的.</p>
+<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.16.09.png" alt="git仓库权限配置"></p>
+<p>“Branch Specifier (blank for ‘any’)    “默认master分支,根据自己的需求填入不同的分支.</p>
+<p>构建触发器和构建环境先跳过,我们不管,待会弄.</p>
+<h3 id="构建"><a href="#构建" class="headerlink" title="构建"></a>构建</h3><p>点击”添加构建步骤”,选择”Execute shell”,然后能看到如下图:<br><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.22.45.png" alt="Execute shell"></p>
+<p>还记得我们上一步的脚本么?修改一下源码路径再放进去.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 切换到源码目录,对应在jenkins-home的workspace下面</span></span><br><span class="line"><span class="built_in">cd</span> ~jenkins-home/workspace/项目名称/Dockerfile所在目录;</span><br><span class="line">image_version=`date +%Y%m%d%H%M`;</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$image_version</span>;</span><br><span class="line"><span class="comment"># 停止之前的docker container</span></span><br><span class="line">docker stop house-web;</span><br><span class="line"><span class="comment"># 删除这个container</span></span><br><span class="line">docker rm house-web;</span><br><span class="line"><span class="comment"># build镜像并且打上tag</span></span><br><span class="line">docker build -t house-web:<span class="variable">$image_version</span> .;</span><br><span class="line">docker images;</span><br><span class="line"><span class="comment"># 把刚刚build出来的镜像跑起来</span></span><br><span class="line">docker run -p 8080:80 -v ~/docker-data/house-web/appsettings.json:/app/appsettings.json -v ~/docker-data/house-web/NLogFile/:/app/NLogFile  --restart=always --name house-web -d house-web:<span class="variable">$image_version</span>;</span><br><span class="line">docker logs house-web;</span><br></pre></td></tr></table></figure>
+<p>如果jenkins主机和程序运行主机不在一台机器上,建议直接在把上面的脚本放在运行主机上,命名成 start_XXX.sh.</p>
+<p>上面的命令直接就是成了</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh username@发布主机的IP <span class="string">'~/start_XXX.sh'</span></span><br></pre></td></tr></table></figure>
+<p>ps:记得在jenkins主机配置<a href="https://blog.csdn.net/wind520/article/details/38421359" target="_blank" rel="noopener">ssh免登陆</a></p>
+<h3 id="构建触发器"><a href="#构建触发器" class="headerlink" title="构建触发器"></a>构建触发器</h3><p>构建触发器就是我们选择什么时候来触发构建任务,有几种方案可以做.</p>
+<ol>
+<li>使用 Build periodically,定时 or 隔N久去拉一次代码构建</li>
+<li>Poll SCM：定时检查源码变更（根据SCM软件的版本号）,如果有变化就去执行构建</li>
+<li>GitHub hook trigger for GITScm polling 或者其他Git平台提供的webhook</li>
+<li>安装Generic Webhook Trigger插件之后,使用其他平台的webhook来触发构建任务.</li>
+</ol>
+<p>我这里选择第4种方案,安装Generic Webhook Trigger插件,下面马上回告诉你为什么这样做的.</p>
+<p>Generic Webhook Trigger插件在”系统管理-管理插件-可选插件”里面直接搜”Generic Webhook Trigger”安装就可以.</p>
+<p>从上一步的构建步骤里面的脚本中我们就知道,其实我们现在要不就在jenkins主机上docker build,要不就在发布目标主机上build,</p>
+<p>build过程比较慢而且还会产生镜像在本机or目标主机上,docker images也没有被管理起来.</p>
+<p>有什么好的办法么?嗯,还真有.直接用阿里云”容器镜像服务”来构建镜像</p>
+<h3 id="使用阿里云-容器镜像服务"><a href="#使用阿里云-容器镜像服务" class="headerlink" title="使用阿里云-容器镜像服务"></a>使用阿里云-容器镜像服务</h3><p>首先登录阿里云,然后进入容器镜像服务,地址是<a href="https://cr.console.aliyun.com/" target="_blank" rel="noopener">https://cr.console.aliyun.com/</a></p>
+<p>首次进入估计需要创建一个命名空间,一般用公司名或者你的名字就完事.</p>
+<p>接着选择”创建镜像仓库”.</p>
+<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.51.25.png" alt="创建镜像仓库"></p>
+<p>选地区-选命名空间-填仓库名称(就是镜像名称)-填摘要-设置代码源(支持GitHub/阿里云code/Bitbucket/私有Gitlab/本地Git等等,给个授权就完事)</p>
+<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.54.10.png" alt="选地区"></p>
+<p>构建设置选择”代码变更时自动构建镜像”,然后选一下构建分支为你想要的分支,填入Dockerfile在源码中的路径,然后保存<br><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.57.50.png" alt="构建分支"></p>
+<p>接着我们进入管理平台看一下.</p>
+<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.00.51.png" alt="aliyun-构建"></p>
+<p>点击一下”立即构建”,然后查看一下日志.<br><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.02.00.png" alt="build 日志"></p>
+<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.02.49.png" alt="构建成功"></p>
+<p>这个时候,我们用docker pull registry-internal.cn-hangzhou.aliyuncs.com/你的命名空间/你的镜像名称 就可以拉到这个阿里云build成功的镜像了.</p>
+<p>镜像build的问题解决了,那么我们怎么自动把镜像发布到我们的运行主机呢?</p>
+<p>这时候webhook又出来了.</p>
+<h3 id="jenkins-webhook触发配置"><a href="#jenkins-webhook触发配置" class="headerlink" title="jenkins webhook触发配置"></a>jenkins webhook触发配置</h3><p>我们看阿里云镜像构建服务里面,有一项是webhook的,官方介绍在这里:<a href="https://help.aliyun.com/document_detail/60949.html?spm=5176.8351553.0.0.645319912fjxim" target="_blank" rel="noopener">阿里云-webhook管理</a></p>
+<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.08.45.png" alt="阿里云-webhook管理"></p>
+<p>这里就需要填入我们的webhook地址,还记得前面我无端端选择的第四种方案,然后让大家跟着安装的Generic Webhook Trigger插件么?</p>
+<p>我们就是用这货来为我们提供webhook API.</p>
+<p>理一下流程:</p>
+<p>git仓库代码变化 -&gt;阿里云容器构建服务启动 -&gt; 构建好镜像之后触发webhook -&gt; jenkins收到阿里云的webhook之后触发job执行部署脚本 -&gt;部署脚本使用阿里云镜像run起来 -&gt;完事.</p>
+<p>我们继续配置Generic Webhook Trigger.</p>
+<p>Generic Webhook Trigger支持的命名触发URL格式是这样的:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://jenkins登录用户名:token授权码@jenkins IP:8080/generic-webhook-trigger/invoke?token=触发器名称</span><br></pre></td></tr></table></figure>
+<p>jenkins登录名和token在”账号-设置-API Token-Show API Token…”里面能看到,找出来之后填到上面去就可以.</p>
+<p>最后一个token参数其实就是”构建触发器”中”触发远程构建”的参数,建议使用job名字.这里的配置大概是这样的:</p>
+<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.21.13.png" alt="触发远程构建"></p>
+<p>最后我们还需要在jenkins全局安全设置中取消勾选“防止跨站点请求伪造（Prevent Cross Site Request Forgery exploits)”选项,这样阿里云webhook才能过得来.</p>
+<p>手动在浏览器中访问一下<a href="http://jenkins登录用户名:token授权码@jenkins" target="_blank" rel="noopener">http://jenkins登录用户名:token授权码@jenkins</a> IP:8080/generic-webhook-trigger/invoke?token=触发器名称<br>如果对应的jenkins Job能正常开始执行,说明整个流程已经ok了.</p>
+<p>最后我们回到上面”阿里云-容器镜像服务-对应镜像仓库-webhook-添加记录”<br><img src="http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.27.02.png" alt="webhook-添加记录"></p>
+<p>PS:webhook名称不要带特殊字符or “-“之类的,不然一直保存失败而且还不会提示你是因为名字不合法,下午被这个坑了半个小时.</p>
+<p>到这里,我们基本大功告成了.</p>
+<p>最后我们再改一下jenkins的脚本,不在本地build docker了,直接拿阿里云镜像服务构建出来的镜像跑就可以.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 停止之前的docker container</span></span><br><span class="line">docker stop house-web;</span><br><span class="line"><span class="comment"># 删除这个container</span></span><br><span class="line">docker rm house-web;</span><br><span class="line">docker pull 你的阿里云镜像地址;</span><br><span class="line"><span class="comment"># 把刚刚build出来的镜像跑起来</span></span><br><span class="line">docker run --restart=always --name 你的contianer名称 你的阿里云镜像地址;</span><br></pre></td></tr></table></figure>
+<h3 id="总结一下我们做了什么"><a href="#总结一下我们做了什么" class="headerlink" title="总结一下我们做了什么"></a>总结一下我们做了什么</h3><ol>
+<li>搭建jenkins</li>
+<li>编写Dockerfile文件,直接编译发布+打包成docker镜像+部署脚本</li>
+<li>使用阿里云-容器构建服务构建docker镜像,构建成功后使用webhook通知jenkins</li>
+<li>配置jenkins webhook触发器,触发部署脚本</li>
+<li>其他项目/语言其实也基本一样的操作,区别只在于Dockerfile的编写</li>
+<li>完事…</li>
+</ol>
 
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://codelover.link/2017/03/25/常用linux命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李国宝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="codelover">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/25/常用linux命令/" itemprop="url">Linux运维相关软件安装配置备忘</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-25T13:16:21+08:00">
+                2017-03-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Linux运维相关软件安装配置备忘"><a href="#Linux运维相关软件安装配置备忘" class="headerlink" title="Linux运维相关软件安装配置备忘"></a>Linux运维相关软件安装配置备忘</h1><h2 id="端口占用相关"><a href="#端口占用相关" class="headerlink" title="端口占用相关"></a>端口占用相关</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//查找端口占用情况</span><br><span class="line">$ netstat -anp | grep <span class="string">"5000"</span></span><br><span class="line">//干掉某个进程</span><br><span class="line">$ <span class="built_in">kill</span> -9 2553</span><br><span class="line">//后台运行 </span><br><span class="line">$ nohup <span class="built_in">command</span> &amp;</span><br></pre></td></tr></table></figure>
+<h2 id="安装SS"><a href="#安装SS" class="headerlink" title="安装SS"></a>安装SS</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get update</span><br><span class="line">//安装ss</span><br><span class="line">$ apt-get install python-pip </span><br><span class="line">$ pip install shadowsocks</span><br><span class="line">//运行ss服务端</span><br><span class="line">$ nohup ssserver -s ip地址 -k 密码 &amp;</span><br></pre></td></tr></table></figure>
+<h2 id="安装MySQL5-7"><a href="#安装MySQL5-7" class="headerlink" title="安装MySQL5.7"></a>安装MySQL5.7</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">http://tecadmin.net/install-mysql-5-on-ubuntu/</span><br><span class="line"></span><br><span class="line">$ sudo apt-get install software-properties-common</span><br><span class="line">$ sudo add-apt-repository -y ppa:ondrej/mysql-5.7</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install mysql-server</span><br><span class="line"></span><br><span class="line">//编辑此处，允许远程登录</span><br><span class="line">/etc/mysql/my.cnf</span><br><span class="line"></span><br><span class="line"><span class="built_in">bind</span>-address		= 0.0.0.0</span><br><span class="line"></span><br><span class="line">//重启MySQL</span><br><span class="line">$ /etc/init.d/mysql restart</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL添加用户"><a href="#MySQL添加用户" class="headerlink" title="MySQL添加用户"></a>MySQL添加用户</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//新增用户</span><br><span class="line">grant all privileges  on *.* to root@<span class="string">'%'</span> identified by <span class="string">"root"</span>;</span><br><span class="line">//立即生效</span><br><span class="line">flush privileges;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">grant select,insert,update,delete,create,drop on  to joe@10.163.225.87 identified by ‘123′;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">grant all  on xxxDB.* to xxx@<span class="string">'%'</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="MySQL提示“Checking-for-tables-which-need-an-upgrade-are-corrupt-or-were-not-closed-cleanly”"><a href="#MySQL提示“Checking-for-tables-which-need-an-upgrade-are-corrupt-or-were-not-closed-cleanly”" class="headerlink" title="MySQL提示“Checking for tables which need an upgrade, are corrupt or were not closed cleanly”"></a>MySQL提示“Checking for tables which need an upgrade, are corrupt or were not closed cleanly”</h2><p>操作步骤：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service mysql stop </span><br><span class="line">$ sudo /etc/init.d/apparmor reload</span><br><span class="line">$ sudo service mysql start</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">或者：</span><br><span class="line"></span><br><span class="line">down vote</span><br><span class="line">This error occurs due to multiple installations of mysql. Run the <span class="built_in">command</span>:</span><br><span class="line"></span><br><span class="line">$ ps -A|grep mysql</span><br><span class="line">Kill the process by using:</span><br><span class="line"></span><br><span class="line">$ sudo pkill mysql</span><br><span class="line">and <span class="keyword">then</span> run <span class="built_in">command</span>:</span><br><span class="line"></span><br><span class="line">$ ps -A|grep mysqld</span><br><span class="line">Also Kill this process by running:</span><br><span class="line"></span><br><span class="line">$ sudo pkill mysqld</span><br><span class="line">Now you are fully <span class="built_in">set</span> just run the following commands:</span><br><span class="line"></span><br><span class="line">$ service mysql restart</span><br><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+<h2 id="7z相关操作"><a href="#7z相关操作" class="headerlink" title="7z相关操作"></a>7z相关操作</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//压缩</span><br><span class="line">$ 7z a -t7z -r manager.7z /home/manager/*</span><br><span class="line">//解压</span><br><span class="line">$ 7z X xx.zip</span><br></pre></td></tr></table></figure>
+<h2 id="腾讯云修改密码-允许root登录"><a href="#腾讯云修改密码-允许root登录" class="headerlink" title="腾讯云修改密码,允许root登录"></a>腾讯云修改密码,允许root登录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ sudo passwd root</span><br><span class="line"></span><br><span class="line">$ sudo vi /etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line">$ sudo service ssh  restart</span><br></pre></td></tr></table></figure>
+<h2 id="开机启动相关"><a href="#开机启动相关" class="headerlink" title="开机启动相关"></a>开机启动相关</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//查看开机启动相关程序</span><br><span class="line">$ ls /etc/rc*</span><br><span class="line">//安装sysv-rc-conf</span><br><span class="line">$ sudo apt-get install sysv-rc-conf</span><br><span class="line">$ sudo sysv-rc-conf</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://codelover.link/2017/03/17/visualstudiocode_for_php_debug/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李国宝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="codelover">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/17/visualstudiocode_for_php_debug/" itemprop="url">用Visual Studio Code Debug世界上最好的语言</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T00:00:00+08:00">
+                2017-03-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Visual-Studio/" itemprop="url" rel="index">
+                    <span itemprop="name">Visual Studio</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="用Visual-Studio-Code-Debug世界上最好的语言"><a href="#用Visual-Studio-Code-Debug世界上最好的语言" class="headerlink" title="用Visual Studio Code Debug世界上最好的语言"></a>用Visual Studio Code Debug世界上最好的语言</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这阵子因缘巧合接手了一个辣鸡项目，是用世界上最好的拍黄片写的，项目基本是另一个小伙伴在撸码，我就兼职打杂和发布做点运维的工作。</p>
+<p>然后昨天项目上了测试版之后，一用起来Error满天飞了。让小伙伴查了很久都没有头绪，实在尴尬，只好自己动手了…</p>
+<p>作为一个后端狗，虽然知道PHP大体原理和框架，看着项目的业务逻辑也大体知道个所以然，在此之前还是没撸过代码的。</p>
+<p>看代码基本是Visual Studio Code或者HBuilder工具，本地跑代码很白痴的在用phpStudy。</p>
+<p>Error出来了，第一反应就是debug咯…然后问了下小伙伴他以前怎么玩的，答曰：echo。</p>
+<p>一口老血都…</p>
+<p>查了下谷歌发现，Visual Studio Code + 插件是完全可以用来调试PHP的，所以就撸起了。</p>
+<h2 id="Visual-Studio-Code-php-debug插件-phpStudy-xdebug"><a href="#Visual-Studio-Code-php-debug插件-phpStudy-xdebug" class="headerlink" title="Visual Studio Code + php-debug插件 + phpStudy + xdebug"></a>Visual Studio Code + php-debug插件 + phpStudy + xdebug</h2><h3 id="安装Visual-Studio-Code"><a href="#安装Visual-Studio-Code" class="headerlink" title="安装Visual Studio Code"></a>安装Visual Studio Code</h3><p>首先肯定是先下载<a href="http://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a> 咯。</p>
+<p>安装好之后，随便在一个文件夹内鼠标“右键”，都能看到Open with code，打开之后如下图：</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/b1cee12e-6215-4f04-9dea-3721400e238b" alt="Open with code"></p>
+<h3 id="安装Visual-Studio-Code-php-debug插件"><a href="#安装Visual-Studio-Code-php-debug插件" class="headerlink" title="安装Visual Studio Code php-debug插件"></a>安装Visual Studio Code php-debug插件</h3><p>装好VS Code之后，接下来是安装一下PHP-Debug插件了。我们在插件商城搜索一下php，排名第二的PHP Debug就是我们要的插件了。<br>如下图：<br><img src="http://7xread.com1.z0.glb.clouddn.com/3f798ea9-bba9-4768-9f58-14257ddc1999" alt="PHP-Debug"></p>
+<p>装好了之后重启一下vs code即可。</p>
+<h3 id="phpStudy"><a href="#phpStudy" class="headerlink" title="phpStudy"></a>phpStudy</h3><p>对于我这种懒人来说，去配置什么PHP运行环境肯定是不愿意的，那么类似的集成环境有么？</p>
+<p>小伙伴和我说，你下个<a href="http://www.phpstudy.net/" target="_blank" rel="noopener">phpStudy</a>撸就算了，别去倒腾什么版本了。</p>
+<p>然后…</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/6c8ea274-9da5-4168-ba80-f6a0f6e173c3" alt="phpStudy"></p>
+<p>下载好了安装完了，打开程序如下图：</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/7d2d12e2-783f-4402-8900-0315905c6948" alt="phpStudy"></p>
+<p>看了下功能，其实这个软件就是集成了各种版本的PHP，可以方便切换PHP版本；同时自带一个Apache和MySQL，各种配置管理起来也挺方便的。<br>（感觉dalao们应该不怎么会用这么白痴的东西，233…</p>
+<p>装好之后，启动一下服务，点击一下phpMyAdmin，看看它打开的网站是否能登录到本地的MySQL数据库。</p>
+<p>如果可以，说明PHP环境应该是正常的了；如果有问题，请自行谷歌了…</p>
+<p>接着切换PHP版本到意向版本，点击一下运行模式旁边的“切换版本”就可以选择版本了。</p>
+<h3 id="xdebug设置"><a href="#xdebug设置" class="headerlink" title="xdebug设置"></a>xdebug设置</h3><p><a href="https://xdebug.org/" target="_blank" rel="noopener">xdebug</a>是什么呢？</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Xdebug作为PHP调试工具，提供了丰富的调试函数，</span><br><span class="line">也可将Xdebug安装配置为zend studio、editplus调试PHP的第三方插件，</span><br><span class="line"></span><br><span class="line">通过开启自动跟踪(auto_trace)和分析器功能，可以直观的看到PHP源代码的性能数据，</span><br><span class="line">以便优化PHP代码。</span><br><span class="line"></span><br><span class="line">引用自：[PHP调试工具Xdebug安装配置教程]</span><br><span class="line">(http://www.cnblogs.com/qiantuwuliang/archive/2011/01/23/1942382.html)</span><br></pre></td></tr></table></figure>
+<p>我们可以在<a href="https://xdebug.org/" target="_blank" rel="noopener">xdebug.org</a>（自备梯子）上面下载到PHP各个版本的xdebug dll使用。</p>
+<p>不过当我打开phpStudy的php-ini打算手动开启debug的时候，非常高兴得发现已经phpStudy已自带了对应版本的xdebug，而且路径都配好了。</p>
+<p>phpStudy的php.ini在“其他选项-打开配置文件-php-ini”，如下图：</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/76b103cd-399c-4bce-a716-098adbd4d212" alt="php.ini"></p>
+<p>把文档拉到最后，看得到xdebug的配置如下：</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/00285d82-f76f-4fd8-8ba6-f429de194809" alt="xdebug"></p>
+<p>phpStudy已经帮我们配置好xdebug dll的路径了，我们只需要手动在zend_extension上面添加远程调试和自动启动配置即可，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">xdebug.remote_enable = 1</span><br><span class="line">xdebug.remote_autostart= 1</span><br></pre></td></tr></table></figure>
+<p>完整配置如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[XDebug]</span><br><span class="line">;xdebug.profiler_output_dir=&quot;C:\phpStudy\tmp\xdebug&quot;</span><br><span class="line">;xdebug.trace_output_dir=&quot;C:\phpStudy\tmp\xdebug&quot;</span><br><span class="line">xdebug.remote_enable = 1</span><br><span class="line">xdebug.remote_autostart= 1</span><br><span class="line">;你的PHP版本的php_xdebug.dll，phpStudy自动设置的</span><br><span class="line">zend_extension=&quot;C:\phpStudy\php\php-5.5.38\ext\php_xdebug.dll&quot;</span><br></pre></td></tr></table></figure></p>
+<p>保存文件，重启一下phpStudy服务。</p>
+<h4 id="Visual-Studio-Code-设置用户配置和调试配置"><a href="#Visual-Studio-Code-设置用户配置和调试配置" class="headerlink" title="Visual Studio Code 设置用户配置和调试配置"></a>Visual Studio Code 设置用户配置和调试配置</h4><p>这个时候，我们随便在PHP文件夹中打开vs code，vs code会自动提示我们：Cannot validate since no PHP executable is set. Use the setting ‘php.validate.executablePath’ to configure the PHP executable.</p>
+<p>嗯，没有设置PHP执行文件，可以通过设置php.validate.executablePath属性来配置它。</p>
+<p>这个在哪配置呢？在“文件-首选项-设置”，打开之后如下图：</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/df4428e9-9ef2-435a-a5f5-ae8bade00a39" alt="php.validate.executablePath"></p>
+<p>这个php.validate.executablePath对应就是当前phpStudy中运行的php.exe的路径，可以在phpStudy-其他选项菜单-打开文件位置-PHP中找到此路径。</p>
+<p>保存好了之后，回到Visual Studio Code界面，转到Debug，选择添加配置，之后选择PHP，生成如下图的launch.json：</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/e1b74467-9142-4a2f-bf5e-89aa2c2e0127" alt="Listen for XDebug"></p>
+<p>不用改任何东西，直接开撸…</p>
+<h4 id="开启Debug"><a href="#开启Debug" class="headerlink" title="开启Debug"></a>开启Debug</h4><p>确保phpStudy启动了，网站也正常运行起来了,然后在Visual Studio Code中启动调试，打上要的断点，接着启动调试。</p>
+<p>如下图：</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/7ac86cce-edc6-49a6-abb6-44f74c55a027" alt="图片描述"></p>
+<p>接着访问你要调试的页面对应的PHP代码，打上你的断点，华丽丽的Debug出来了…</p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/7f7739df-02d4-47e5-8e42-67b9bd9f75ee" alt="异常"></p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/41913030-362c-45cb-a187-08eed7728e8c" alt="命中断点"></p>
+<p>F10单步调试，F11跳入函数，F5直接运行之类的快捷键自己玩吧。</p>
+<h3 id="其他运行环境下的配置"><a href="#其他运行环境下的配置" class="headerlink" title="其他运行环境下的配置"></a>其他运行环境下的配置</h3><p>基本没什么区别，配置php.ini，下载到对应版本的xdebug.dll，php.validate.executablePath配置正确就完事。</p>
+<p>其他参考链接：</p>
+<ol>
+<li><p><a href="http://blog.csdn.net/ruihanchen/article/details/7705842" target="_blank" rel="noopener"> 如何使用XDebug调试php</a></p>
+</li>
+<li><p><a href="http://www.chenxuanyi.cn/xampp-phpstorm-xdebug.html" target="_blank" rel="noopener">XAMPP环境下用phpStorm+XDebug进行断点调试的配置</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/dc_726/article/details/9905517" target="_blank" rel="noopener">PHPStorm下XDebug配置</a></p>
+</li>
+</ol>
+<h4 id="PS-果然是世界上最好的语言…-逃"><a href="#PS-果然是世界上最好的语言…-逃" class="headerlink" title="PS:果然是世界上最好的语言…(逃"></a>PS:果然是世界上最好的语言…(逃</h4>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://codelover.link/2016/12/04/how_to_make_crawler_base_netcore/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李国宝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="codelover">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/12/04/how_to_make_crawler_base_netcore/" itemprop="url">手把手教你用.NET Core写爬虫</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-04T00:00:00+08:00">
+                2016-12-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/asp-net-core/" itemprop="url" rel="index">
+                    <span itemprop="name">asp.net core</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="手把手教你用-NET-Core写爬虫"><a href="#手把手教你用-NET-Core写爬虫" class="headerlink" title="手把手教你用.NET Core写爬虫"></a>手把手教你用.NET Core写爬虫</h1><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>自从上一个项目<a href="https://github.com/liguobao/58HouseSearch" target="_blank" rel="noopener">58HouseSearch</a>从.NET迁移到.NET core之后，磕磕碰碰磨蹭了一个月才正式上线到新版本。<br>然后最近又开了个新坑，搞了个<a href="http://codelover.win/" target="_blank" rel="noopener">Dy2018Crawler</a>用来爬dy2018电影天堂上面的电影资源。这里也借机简单介绍一下如何基于.NET Core写一个爬虫。<br>PS：如有偏错，敬请指明…<br>PPS:该去电影院还是多去电影院，毕竟美人良时可无价。</p>
+<h2 id="准备工作（-NET-Core准备）"><a href="#准备工作（-NET-Core准备）" class="headerlink" title="准备工作（.NET Core准备）"></a>准备工作（.NET Core准备）</h2><p>首先，肯定是先安装.NET Core咯。下载及安装教程在这里：<a href="https://www.microsoft.com/net/core" target="_blank" rel="noopener">.NET - Powerful Open Source Development</a>。无论你是Windows、linux还是mac，统统可以玩。</p>
+<p>我这里的环境是：Windows10 + VS2015 community updata3 + .NET Core 1.1.0 SDK + .NET Core 1.0.1 tools Preview 2.</p>
+<p>理论上，只需要安装一下 .NET Core 1.1.0 SDK 即可开发.NET Core程序，至于用什么工具写代码都无关紧要了。</p>
+<p>安装好以上工具之后，在VS2015的新建项目就可以看到.NET Core的模板了。如下图：</p>
+<p><img src="https://www.microsoft.com/net/images/screenshots/FileNewProject.png" alt="123"></p>
+<p>为了简单起见，我们创建的时候，直接选择VS .NET Core tools自带的模板。</p>
+<h2 id="一个爬虫的自我修养"><a href="#一个爬虫的自我修养" class="headerlink" title="一个爬虫的自我修养"></a>一个爬虫的自我修养</h2><h3 id="分析网页"><a href="#分析网页" class="headerlink" title="分析网页"></a>分析网页</h3><p>写爬虫之前，我们首先要先去了解一下即将要爬取的网页数据组成。</p>
+<p>具体到网页的话，便是分析我们要抓取的数据在HTML里面是用什么标签抑或有什么样的标记，然后使用这个标记把数据从HTML中提取出来。在我这里的话，用的更多的是HTML标签的ID和CSS属性。</p>
+<p>以本文章想要爬取的dy2018.com为例,简单描述一下这个过程。dy2018.com主页如下图：</p>
+<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/123.png" alt="123"></p>
+<p>在chrome里面，按F12进入开发者模式，接着如下图使用鼠标选择对应页面数据，然后去分析页面HTML组成。</p>
+<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/chromeF12_Select_HTML.png" alt="234"></p>
+<p>接着我们开始分析页面数据:</p>
+<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/chrome_dy2018_lstmovie_divclass.png" alt="123"></p>
+<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/chrome_dy2018_a.png" alt="123"></p>
+<p>经过简单分析HTML，我们得到以下结论：</p>
+<ol>
+<li><p><a href="http://www.dy2018.com首页的电影数据存储在一个class为co_content222的div标签里面" target="_blank" rel="noopener">www.dy2018.com首页的电影数据存储在一个class为co_content222的div标签里面</a></p>
+</li>
+<li><p>电影详情链接为a标签，标签显示文本就是电影名称，URL即详情URL</p>
+</li>
+</ol>
+<p>那么总结下来，我们的工作就是：找到class=’co_content222’ 的div标签，从里面提取所有的a标签数据。</p>
+<h3 id="开始写代码…"><a href="#开始写代码…" class="headerlink" title="开始写代码…"></a>开始写代码…</h3><p>之前在写<a href="https://zhuanlan.zhihu.com/p/22764927" target="_blank" rel="noopener">58HouseSearch项目迁移到asp.net core</a>简单提过AngleSharp库，一个基于.NET（C#）开发的专门为解析xHTML源码的DLL组件。</p>
+<ol>
+<li><p>AngleSharp主页在这里：<a href="https://anglesharp.github.io/" target="_blank" rel="noopener">https://anglesharp.github.io/</a>，</p>
+</li>
+<li><p>博客园文章：<a href="http://www.cnblogs.com/pandait/p/AngleSharp.html" target="_blank" rel="noopener">解析HTML利器AngleSharp介绍</a>，</p>
+</li>
+<li><p>Nuget地址:<a href="https://www.nuget.org/packages/AngleSharp" target="_blank" rel="noopener">Nuget AngleSharp</a> 安装命令：Install-Package AngleSharp</p>
+</li>
+</ol>
+<h4 id="获取电影列表数据"><a href="#获取电影列表数据" class="headerlink" title="获取电影列表数据"></a>获取电影列表数据</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> HtmlParser htmlParser = <span class="keyword">new</span> HtmlParser();</span><br><span class="line"></span><br><span class="line"> <span class="keyword">private</span>  ConcurrentDictionary&lt;<span class="keyword">string</span>, MovieInfo&gt; _cdMovieInfo = <span class="keyword">new</span> ConcurrentDictionary&lt;<span class="keyword">string</span>, MovieInfo&gt;();</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">AddToHotMovieList</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">          <span class="comment">//此操作不阻塞当前其他操作，所以使用Task</span></span><br><span class="line">          <span class="comment">// _cdMovieInfo 为线程安全字典，存储了当期所有的电影数据</span></span><br><span class="line">          Task.Factory.StartNew(()=&gt; </span><br><span class="line">          &#123;</span><br><span class="line">              <span class="keyword">try</span></span><br><span class="line">              &#123;</span><br><span class="line">                  <span class="comment">//通过URL获取HTML</span></span><br><span class="line">                  <span class="keyword">var</span> htmlDoc = HTTPHelper.GetHTMLByURL(<span class="string">"http://www.dy2018.com/"</span>);</span><br><span class="line">                  <span class="comment">//HTML 解析成 IDocument</span></span><br><span class="line">                  <span class="keyword">var</span> dom = htmlParser.Parse(htmlDoc);</span><br><span class="line">                  <span class="comment">//从dom中提取所有class='co_content222'的div标签</span></span><br><span class="line">                  <span class="comment">//QuerySelectorAll方法接受 选择器语法 </span></span><br><span class="line">                  <span class="keyword">var</span> lstDivInfo = dom.QuerySelectorAll(<span class="string">"div.co_content222"</span>);</span><br><span class="line">                  <span class="keyword">if</span> (lstDivInfo != <span class="literal">null</span>)</span><br><span class="line">                  &#123;</span><br><span class="line">                      <span class="comment">//前三个DIV为新电影</span></span><br><span class="line">                      <span class="keyword">foreach</span> (<span class="keyword">var</span> divInfo <span class="keyword">in</span> lstDivInfo.Take(<span class="number">3</span>))</span><br><span class="line">                      &#123;</span><br><span class="line">                          <span class="comment">//获取div中所有的a标签且a标签中含有"/i/"的</span></span><br><span class="line">                          <span class="comment">//Contains("/i/") 条件的过滤是因为在测试中发现这一块div中的a标签有可能是广告链接</span></span><br><span class="line">                          divInfo.QuerySelectorAll(<span class="string">"a"</span>).Where(a =&gt; a.GetAttribute(<span class="string">"href"</span>).Contains(<span class="string">"/i/"</span>)).ToList().ForEach(</span><br><span class="line">                          a =&gt;</span><br><span class="line">                          &#123;</span><br><span class="line">                              <span class="comment">//拼接成完整链接</span></span><br><span class="line">                              <span class="keyword">var</span> onlineURL = <span class="string">"http://www.dy2018.com"</span> + a.GetAttribute(<span class="string">"href"</span>);</span><br><span class="line">                              <span class="comment">//看一下是否已经存在于现有数据中</span></span><br><span class="line">                              <span class="keyword">if</span> (!_cdMovieInfo.ContainsKey(onlineURL))</span><br><span class="line">                              &#123;</span><br><span class="line">                                  <span class="comment">//获取电影的详细信息</span></span><br><span class="line">                                  MovieInfo movieInfo = FillMovieInfoFormWeb(a, onlineURL);</span><br><span class="line">                                  <span class="comment">//下载链接不为空才添加到现有数据</span></span><br><span class="line">                                  <span class="keyword">if</span> (movieInfo.XunLeiDownLoadURLList != <span class="literal">null</span> &amp;&amp; movieInfo.XunLeiDownLoadURLList.Count != <span class="number">0</span>)</span><br><span class="line">                                  &#123;</span><br><span class="line">                                       _cdMovieInfo.TryAdd(movieInfo.Dy2018OnlineUrl, movieInfo);</span><br><span class="line">                                  &#125;</span><br><span class="line">                              &#125;</span><br><span class="line">                          &#125;);</span><br><span class="line">                      &#125;</span><br><span class="line">                  &#125;</span><br><span class="line"></span><br><span class="line">              &#125;</span><br><span class="line">              <span class="keyword">catch</span>(Exception ex)</span><br><span class="line">              &#123;</span><br><span class="line"></span><br><span class="line">              &#125;</span><br><span class="line">          &#125;);</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="获取电影详细信息"><a href="#获取电影详细信息" class="headerlink" title="获取电影详细信息"></a>获取电影详细信息</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> MovieInfo <span class="title">FillMovieInfoFormWeb</span>(<span class="params">AngleSharp.Dom.IElement a, <span class="keyword">string</span> onlineURL</span>)</span></span><br><span class="line"><span class="function">       </span>&#123;</span><br><span class="line">           <span class="keyword">var</span> movieHTML = HTTPHelper.GetHTMLByURL(onlineURL);</span><br><span class="line">           <span class="keyword">var</span> movieDoc = htmlParser.Parse(movieHTML);</span><br><span class="line">           <span class="comment">//http://www.dy2018.com/i/97462.html 分析过程见上，不再赘述</span></span><br><span class="line">           <span class="comment">//电影的详细介绍 在id为Zoom的标签中</span></span><br><span class="line">           <span class="keyword">var</span> zoom = movieDoc.GetElementById(<span class="string">"Zoom"</span>);</span><br><span class="line">           <span class="comment">//下载链接在 bgcolor='#fdfddf'的td中，有可能有多个链接</span></span><br><span class="line">           <span class="keyword">var</span> lstDownLoadURL = movieDoc.QuerySelectorAll(<span class="string">"[bgcolor='#fdfddf']"</span>);</span><br><span class="line">           <span class="comment">//发布时间 在class='updatetime'的span标签中</span></span><br><span class="line">           <span class="keyword">var</span> updatetime = movieDoc.QuerySelector(<span class="string">"span.updatetime"</span>); <span class="keyword">var</span> pubDate = DateTime.Now;</span><br><span class="line">           <span class="keyword">if</span>(updatetime!=<span class="literal">null</span> &amp;&amp; !<span class="keyword">string</span>.IsNullOrEmpty(updatetime.InnerHtml))</span><br><span class="line">           &#123;</span><br><span class="line">               <span class="comment">//内容带有“发布时间：”字样，replace成""之后再去转换，转换失败不影响流程</span></span><br><span class="line">               DateTime.TryParse(updatetime.InnerHtml.Replace(<span class="string">"发布时间："</span>, <span class="string">""</span>), <span class="keyword">out</span> pubDate);</span><br><span class="line">           &#125;</span><br><span class="line"></span><br><span class="line">           <span class="keyword">var</span> movieInfo = <span class="keyword">new</span> MovieInfo()</span><br><span class="line">           &#123;</span><br><span class="line">               <span class="comment">//InnerHtml中可能还包含font标签，做多一个Replace</span></span><br><span class="line">               MovieName = a.InnerHtml.Replace(<span class="string">"&lt;font color=\"#0c9000\"&gt;"</span>,<span class="string">""</span>).Replace(<span class="string">"&lt;font color=\"	#0c9000\"&gt;"</span>,<span class="string">""</span>).Replace(<span class="string">"&lt;/font&gt;"</span>, <span class="string">""</span>),</span><br><span class="line">               Dy2018OnlineUrl = onlineURL,</span><br><span class="line">               MovieIntro = zoom != <span class="literal">null</span> ? WebUtility.HtmlEncode(zoom.InnerHtml) : <span class="string">"暂无介绍..."</span>,<span class="comment">//可能没有简介，虽然好像不怎么可能</span></span><br><span class="line">               XunLeiDownLoadURLList = lstDownLoadURL != <span class="literal">null</span> ?</span><br><span class="line">               lstDownLoadURL.Select(d =&gt; d.FirstElementChild.InnerHtml).ToList() : <span class="literal">null</span>,<span class="comment">//可能没有下载链接</span></span><br><span class="line">               PubDate = pubDate,</span><br><span class="line">           &#125;;</span><br><span class="line">           <span class="keyword">return</span> movieInfo;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="HTTPHelper"><a href="#HTTPHelper" class="headerlink" title="HTTPHelper"></a>HTTPHelper</h3><p>这边有个小坑，dy2018网页编码格式是GB2312,.NET Core默认不支持GB2312，使用Encoding.GetEncoding(“GB2312”)的时候会抛出异常。</p>
+<p>解决方案是手动安装System.Text.Encoding.CodePages包(Install-Package System.Text.Encoding.CodePages),</p>
+<p>然后在Starup.cs的Configure方法中加入Encoding.RegisterProvider(CodePagesEncodingProvider.Instance),接着就可以正常使用Encoding.GetEncoding(“GB2312”)了。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Net.Http;</span><br><span class="line"><span class="keyword">using</span> System.Net.Http.Headers;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Dy2018Crawler</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">HTTPHelper</span></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> HttpClient Client &#123; <span class="keyword">get</span>; &#125; = <span class="keyword">new</span> HttpClient();</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">string</span> <span class="title">GetHTMLByURL</span>(<span class="params"><span class="keyword">string</span> url</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                System.Net.WebRequest wRequest = System.Net.WebRequest.Create(url);</span><br><span class="line">                wRequest.ContentType = <span class="string">"text/html; charset=gb2312"</span>;</span><br><span class="line"></span><br><span class="line">                wRequest.Method = <span class="string">"get"</span>;</span><br><span class="line">                wRequest.UseDefaultCredentials = <span class="literal">true</span>;</span><br><span class="line">                <span class="comment">// Get the response instance.</span></span><br><span class="line">                <span class="keyword">var</span> task = wRequest.GetResponseAsync();</span><br><span class="line">                System.Net.WebResponse wResp = task.Result;</span><br><span class="line">                System.IO.Stream respStream = wResp.GetResponseStream();</span><br><span class="line">                <span class="comment">//dy2018这个网站编码方式是GB2312,</span></span><br><span class="line">                <span class="keyword">using</span> (System.IO.StreamReader reader = <span class="keyword">new</span> System.IO.StreamReader(respStream, Encoding.GetEncoding(<span class="string">"GB2312"</span>)))</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">return</span> reader.ReadToEnd();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(ex.ToString());</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">string</span>.Empty;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">       </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="定时任务的实现"><a href="#定时任务的实现" class="headerlink" title="定时任务的实现"></a>定时任务的实现</h3><p>定时任务我这里使用的是<a href="https://www.nuget.org/packages/Pomelo.AspNetCore.TimedJob/1.1.0-rtm-10026" target="_blank" rel="noopener">Pomelo.AspNetCore.TimedJob</a>。</p>
+<p>Pomelo.AspNetCore.TimedJob是一个.NET Core实现的定时任务job库，支持毫秒级定时任务、从数据库读取定时配置、同步异步定时任务等功能。</p>
+<p>由.NET Core社区大神兼前微软MVP<a href="https://www.nuget.org/profiles/AmamiyaYuuko" target="_blank" rel="noopener">AmamiyaYuuko</a>(入职微软之后就卸任MVP…)开发维护，不过好像没有开源，回头问下看看能不能开源掉。</p>
+<p>nuget上有各种版本，按需自取。地址：<a href="https://www.nuget.org/packages/Pomelo.AspNetCore.TimedJob/1.1.0-rtm-10026" target="_blank" rel="noopener">https://www.nuget.org/packages/Pomelo.AspNetCore.TimedJob/1.1.0-rtm-10026</a></p>
+<p>作者自己的介绍文章：<a href="http://www.1234.sh/post/pomelo-extensions-timed-jobs" target="_blank" rel="noopener">Timed Job - Pomelo扩展包系列</a></p>
+<h3 id="Startup-cs相关代码"><a href="#Startup-cs相关代码" class="headerlink" title="Startup.cs相关代码"></a>Startup.cs相关代码</h3><p>我这边使用的话，首先肯定是先安装对应的包：Install-Package Pomelo.AspNetCore.TimedJob -Pre</p>
+<p>然后在Startup.cs的ConfigureServices函数里面添加Service,在Configure函数里面Use一下。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// This method gets called by the runtime. Use this method to add services to the container.</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ConfigureServices</span>(<span class="params">IServiceCollection services</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// Add framework services.</span></span><br><span class="line">    services.AddMvc();</span><br><span class="line">    <span class="comment">//Add TimedJob services</span></span><br><span class="line">    services.AddTimedJob();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Configure</span>(<span class="params">IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//使用TimedJob</span></span><br><span class="line">    app.UseTimedJob();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (env.IsDevelopment())</span><br><span class="line">    &#123;</span><br><span class="line">        app.UseDeveloperExceptionPage();</span><br><span class="line">        app.UseBrowserLink();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        app.UseExceptionHandler(<span class="string">"/Home/Error"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    app.UseStaticFiles();</span><br><span class="line"></span><br><span class="line">    app.UseMvc(routes =&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        routes.MapRoute(</span><br><span class="line">            name: <span class="string">"default"</span>,</span><br><span class="line">            template: <span class="string">"&#123;controller=Home&#125;/&#123;action=Index&#125;/&#123;id?&#125;"</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">    Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Job相关代码"><a href="#Job相关代码" class="headerlink" title="Job相关代码"></a>Job相关代码</h4><p>接着新建一个类，明明为XXXJob.cs,引用命名空间using Pomelo.AspNetCore.TimedJob，XXXJob继承于Job，添加以下代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> public class AutoGetMovieListJob:Job</span><br><span class="line"> &#123;</span><br><span class="line">     // Begin 起始时间；Interval执行时间间隔，单位是毫秒，建议使用以下格式，此处为3小时；SkipWhileExecuting是否等待上一个执行完成，true为等待；</span><br><span class="line">     [Invoke(Begin = &quot;2016-11-29 22:10&quot;, Interval = 1000 * 3600*3, SkipWhileExecuting =true)]</span><br><span class="line">     public void Run()</span><br><span class="line">     &#123;</span><br><span class="line">          //Job要执行的逻辑代码</span><br><span class="line">          </span><br><span class="line">         //LogHelper.Info(&quot;Start crawling&quot;);</span><br><span class="line">         //AddToLatestMovieList(100);</span><br><span class="line">         //AddToHotMovieList();</span><br><span class="line">         //LogHelper.Info(&quot;Finish crawling&quot;);</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="项目发布相关"><a href="#项目发布相关" class="headerlink" title="项目发布相关"></a>项目发布相关</h2><h3 id="新增runtimes节点"><a href="#新增runtimes节点" class="headerlink" title="新增runtimes节点"></a>新增runtimes节点</h3><p>使用VS2015新建的模板工程，project.json配置默认是没有runtimes节点的.</p>
+<p>我们想要发布到非Windows平台的时候，需要手动配置一下此节点以便生成。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  <span class="string">"runtimes"</span>: &#123;</span><br><span class="line">  <span class="string">"win7-x64"</span>: &#123;&#125;,</span><br><span class="line">  <span class="string">"win7-x86"</span>: &#123;&#125;,</span><br><span class="line">  <span class="string">"osx.10.10-x64"</span>: &#123;&#125;,</span><br><span class="line">  <span class="string">"osx.10.11-x64"</span>: &#123;&#125;,</span><br><span class="line">  <span class="string">"ubuntu.14.04-x64"</span>: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="删除-注释scripts节点"><a href="#删除-注释scripts节点" class="headerlink" title="删除/注释scripts节点"></a>删除/注释scripts节点</h3><p>生成时会调用node.js脚本构建前端代码，这个不能确保每个环境都有bower存在…注释完事。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//"scripts": &#123;</span></span><br><span class="line"><span class="comment">//  "prepublish": [ "bower install", "dotnet bundle" ],</span></span><br><span class="line"><span class="comment">//  "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]</span></span><br><span class="line"><span class="comment">//&#125;,</span></span><br></pre></td></tr></table></figure>
+<h3 id="删除-注释dependencies节点里面的type"><a href="#删除-注释dependencies节点里面的type" class="headerlink" title="删除/注释dependencies节点里面的type"></a>删除/注释dependencies节点里面的type</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"Microsoft.NETCore.App"</span>: &#123;</span><br><span class="line">      <span class="string">"version"</span>: <span class="string">"1.1.0"</span></span><br><span class="line">      <span class="comment">//"type": "platform"</span></span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+<p>project.json的相关配置说明可以看下这个官方文档：<a href="https://github.com/aspnet/Home/wiki/Project.json-file" target="_blank" rel="noopener">Project.json-file</a>,<br>或者张善友老师的文章<a href="http://www.cnblogs.com/shanyou/p/5693453.html" target="_blank" rel="noopener">.NET Core系列 ： 2 、project.json 这葫芦里卖的什么药</a></p>
+<h3 id="开发编译发布"><a href="#开发编译发布" class="headerlink" title="开发编译发布"></a>开发编译发布</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//还原各种包文件</span><br><span class="line">dotnet restore;</span><br><span class="line"></span><br><span class="line">//发布到C:\code\website\Dy2018Crawler文件夹</span><br><span class="line">dotnet publish -r ubuntu.14.04-x64 -c Release -o <span class="string">"C:\code\website\Dy2018Crawler"</span>;</span><br></pre></td></tr></table></figure>
+<p>最后，照旧开源……以上代码都在下面找到：</p>
+<p>Gayhub地址：<a href="https://github.com/liguobao/Dy2018Crawler" target="_blank" rel="noopener">https://github.com/liguobao/Dy2018Crawler</a></p>
+<p>在线地址：<a href="http://codelover.win/" target="_blank" rel="noopener">http://codelover.win/</a></p>
+<p>PS:回头写个爬片大家滋持不啊…</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://codelover.link/2016/11/25/auto_rebase_git_repository/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李国宝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="codelover">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/11/25/auto_rebase_git_repository/" itemprop="url">自动同步git repository脚本</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-25T00:00:00+08:00">
+                2016-11-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="自动同步git-repository脚本"><a href="#自动同步git-repository脚本" class="headerlink" title="自动同步git repository脚本"></a>自动同步git repository脚本</h1><p>由于平时偶尔需要merge不同分支代码到正式版本用于发布版本，merge前就需要先把各种分支代码更新到最新，接着再去做merge工作。</p>
+<p>经常使用的分支其实不算太多，不过仓库倒是有好几个。来来去去写命令行或者GUI操作多了觉得有点繁琐，就琢磨来写个脚本做吧。</p>
+<p>PS：偷懒是人类进步的动力…</p>
+<p>找了下资料，无外乎就是bat/sh脚本调用git cmd,之前写过bat命令，所以一开始是走这个思路的。</p>
+<p>不料在PATH上配置好了git bin的路径之后，使用git命令没问题了，不过pull rebase的时候提示publickey无效。可是我的publickey一直都在.ssh里面,不存在无效的问题…</p>
+<p>懒得纠结，换shell吧。</p>
+<p>参考资料：</p>
+<p><a href="https://www.zhihu.com/question/38962022" target="_blank" rel="noopener">请问如何写一个批处理自动打开 gitbash，然后自动执行一系列git命令（windows平台）？</a></p>
+<h2 id="Show-Code"><a href="#Show-Code" class="headerlink" title="Show Code"></a>Show Code</h2><p>使用shell就更好玩了，直接把git bash运行的命令扔到.sh文件里面就完事了。所以…如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">printf "Start rebase 58HouseSearch. \r\n"</span><br><span class="line">cd ./58HouseSearch;</span><br><span class="line">git checkout master;</span><br><span class="line">git pull --rebase origin master;</span><br><span class="line">printf "Finish Pull Rebase 58HouseSearch release and master.\r\n"</span><br><span class="line">read -p "Press any key to continue.";</span><br><span class="line">cd ..;</span><br><span class="line"></span><br><span class="line">printf "Start rebase hexoforblog;\r\n"</span><br><span class="line">cd ./hexoforblog;</span><br><span class="line">git checkout master;</span><br><span class="line">git pull --rebase origin master;</span><br><span class="line">git checkout master;</span><br><span class="line">printf "Finish Pull Rebase hexoforblog.\r\n"</span><br><span class="line">read -p "Press any key to continue.";</span><br><span class="line">cd ..;</span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<ol>
+<li>printf 为打印函数，就像C语言那样用就好；</li>
+<li>read -p “Press any key to continue.”; 这个是接受输入，结合起来可以做更复杂的行为咯。</li>
+<li>输出内容和我们在git bash里面操作是一致的。</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://codelover.link/2016/11/01/webchat_JS_SDK/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李国宝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="codelover">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/11/01/webchat_JS_SDK/" itemprop="url">ASP.NET MVC 微信JS-SDK认证</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-01T00:00:00+08:00">
+                2016-11-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/dotnet-core/" itemprop="url" rel="index">
+                    <span itemprop="name">dotnet core</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="ASP-NET-MVC-微信JS-SDK认证"><a href="#ASP-NET-MVC-微信JS-SDK认证" class="headerlink" title="ASP.NET MVC 微信JS-SDK认证"></a>ASP.NET MVC 微信JS-SDK认证</h1><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>前阵子因为有个项目需要做微信自定义分享功能，因而去研究了下微信JS-SDK相关知识。</p>
+<p>此文做个简单的记(tu)录(cao)…</p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>所有的东西都从文档开始:<a href="http://mp.weixin.qq.com/wiki/11/74ad127cc054f6b80759c40f77ec03db.html" target="_blank" rel="noopener">微信JSSDK说明文档</a></p>
+<p><img src="http://7xread.com1.z0.glb.clouddn.com/44b1232e-9311-4abb-9200-6dd4936d7c47" alt="分享接口"></p>
+<p>项目需要用到的是<a href="http://mp.weixin.qq.com/wiki/11/74ad127cc054f6b80759c40f77ec03db.html#.E5.88.86.E4.BA.AB.E6.8E.A5.E5.8F.A3" target="_blank" rel="noopener">分享接口</a> 不过使用微信JS-SDK之前，需要做JS接口认证。</p>
+<p>认证如下：</p>
+<p>步骤一：绑定域名</p>
+<p>步骤二：引入JS文件</p>
+<p>步骤三：通过config接口注入权限验证配置</p>
+<p>步骤四：通过ready接口处理成功验证</p>
+<p>步骤五：通过error接口处理失败验证</p>
+<p>步骤一中允许使用域名/子域名，只要xx.com/xxx.txt或者xx.com/mp/xxx.txt能访问就好。域名认证通过之后，此域名下的所有端口的网站都可以使用JS-SDK。</p>
+<p>步骤二没什么问题，略过。</p>
+<p>步骤三最磨人，下面单独讲解。</p>
+<h3 id="config接口注入权限验证配置"><a href="#config接口注入权限验证配置" class="headerlink" title="config接口注入权限验证配置"></a>config接口注入权限验证配置</h3><p>先来一段说明：</p>
+<p>所有需要使用JS-SDK的页面必须先注入配置信息，否则将无法调用<br>（同一个url仅需调用一次，对于变化url的SPA的web app可在每次url变化时进行调用,<br>目前Android微信客户端不支持pushState的H5新特性，<br>所以使用pushState来实现web app的页面会导致签名失败，此问题会在Android6.2中修复）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">wx.config(&#123;</span><br><span class="line">    debug: <span class="literal">true</span>, <span class="comment">// 开启调试模式,调用的所有api的返回值会在客户端alert出来，</span></span><br><span class="line">    <span class="comment">//若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。</span></span><br><span class="line">    appId: <span class="string">''</span>, <span class="comment">// 必填，公众号的唯一标识</span></span><br><span class="line">    timestamp: , <span class="comment">// 必填，生成签名的时间戳</span></span><br><span class="line">    nonceStr: <span class="string">''</span>, <span class="comment">// 必填，生成签名的随机串</span></span><br><span class="line">    signature: <span class="string">''</span>,<span class="comment">// 必填，签名，见附录1</span></span><br><span class="line">    jsApiList: [] <span class="comment">// 必填，需要使用的JS接口列表，所有JS接口列表见附录2</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>看到这里肯定懵逼了，这是都什么鬼…怎么玩啊。</p>
+<p>提示我们去看附录1…看完之后总结如下：</p>
+<ol>
+<li>使用config接口注入权限验证配置，重点是生成合法的signatrue</li>
+<li>生成signature需要通过appid和secret获取token</li>
+<li>时间戳和调用接口URL必不可少</li>
+<li>此操作需要服务端完成，不能使用客户端实现</li>
+</ol>
+<p>整个过程变成：</p>
+<ol>
+<li><p>通过appid和secret获取access_token，接着使用token获取jsapi_ticket；</p>
+</li>
+<li><p>拿到jsapi_ticket之后，把jsapi_ticket、时间戳、随机字符串、接口调用页面URL 拼接成完整字符串，使用sha1算法加密得到signature。</p>
+</li>
+<li><p>最后返回至页面，在wx.config里面填入appid，上一步的时间戳timestamp，上一部的随机字符串、sha1拿到的signature，想要使用的JS接口。</p>
+</li>
+</ol>
+<p>废话少说，直接上代码吧。</p>
+<h3 id="代码时间"><a href="#代码时间" class="headerlink" title="代码时间"></a>代码时间</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">WeiXinController</span> : <span class="title">Controller</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">readonly</span> <span class="keyword">string</span> appid =</span><br><span class="line">    System.Web.Configuration.WebConfigurationManager.AppSettings[<span class="string">"wxappid"</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">readonly</span> <span class="keyword">string</span> secret =</span><br><span class="line">    System.Web.Configuration.WebConfigurationManager.AppSettings[<span class="string">"wxsecret"</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">readonly</span> <span class="keyword">bool</span> isDedug =</span><br><span class="line">    System.Web.Configuration.WebConfigurationManager.AppSettings[<span class="string">"IsDebug"</span>] ==<span class="string">"true"</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">string</span> _ticket = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> DateTime _lastTimestamp;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ActionResult <span class="title">Info</span>(<span class="params"><span class="keyword">string</span> url,<span class="keyword">string</span> noncestr</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">string</span>.IsNullOrEmpty(_ticket) || </span><br><span class="line">        _lastTimestamp == <span class="literal">null</span> || (_lastTimestamp - DateTime.Now).Milliseconds &gt; <span class="number">7200</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">var</span> resultString = HTTPHelper.GetHTMLByURL(<span class="string">"https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid="</span></span><br><span class="line">                + appid + <span class="string">"&amp;secret="</span> + secret);</span><br><span class="line">            <span class="keyword">dynamic</span> resultValue = JsonConvert.DeserializeObject&lt;<span class="keyword">dynamic</span>&gt;(resultString);</span><br><span class="line">            <span class="keyword">if</span> (resultValue == <span class="literal">null</span> || resultValue.access_token == <span class="literal">null</span> </span><br><span class="line">            || resultValue.access_token.Value == <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> Json(<span class="keyword">new</span> &#123; issuccess = <span class="literal">false</span>, </span><br><span class="line">                error = <span class="string">"获取token失败"</span> &#125;);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">var</span> token = resultValue.access_token.Value;</span><br><span class="line"></span><br><span class="line">            resultString = HTTPHelper.GetHTMLByURL</span><br><span class="line">            (<span class="string">"https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token="</span> + </span><br><span class="line">            token + <span class="string">"&amp;type=jsapi"</span>);</span><br><span class="line">            <span class="keyword">dynamic</span> ticketValue = JsonConvert.DeserializeObject&lt;<span class="keyword">dynamic</span>&gt;(resultString);</span><br><span class="line">            <span class="keyword">if</span> (ticketValue == <span class="literal">null</span> || ticketValue.errcode == <span class="literal">null</span></span><br><span class="line">            || ticketValue.errcode.Value != <span class="number">0</span> || ticketValue.ticket == <span class="literal">null</span>)</span><br><span class="line">                <span class="keyword">return</span> Json(<span class="keyword">new</span> &#123; issuccess = <span class="literal">false</span>,</span><br><span class="line">                error = <span class="string">"获取ticketValue失败"</span> &#125;);</span><br><span class="line">            _ticket = ticketValue.ticket.Value;</span><br><span class="line">            _lastTimestamp = DateTime.Now;</span><br><span class="line">            <span class="keyword">var</span> timestamp = GetTimeStamp();</span><br><span class="line">            <span class="keyword">var</span> hexString = <span class="keyword">string</span>.Format(<span class="string">"jsapi_ticket=&#123;0&#125;&amp;noncestr=&#123;3&#125;&amp;timestamp=&#123;1&#125;&amp;url=&#123;2&#125;"</span>,</span><br><span class="line">            _ticket, timestamp, url,noncestr);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> Json(<span class="keyword">new</span> &#123;</span><br><span class="line">                issuccess = <span class="literal">true</span>, </span><br><span class="line">                sha1value = GetSHA1Value(hexString), </span><br><span class="line">                timestamp = timestamp, </span><br><span class="line">                url = url, </span><br><span class="line">                appid = appid, </span><br><span class="line">                debug=isDedug,</span><br><span class="line">                tiket=_ticket</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">var</span> timestamp = GetTimeStamp();</span><br><span class="line">            <span class="keyword">var</span> hexString = <span class="keyword">string</span>.Format(<span class="string">"jsapi_ticket=&#123;0&#125;&amp;noncestr=1234567890123456&amp;timestamp=&#123;1&#125;&amp;url=&#123;2&#125;"</span>,</span><br><span class="line">               _ticket, timestamp, url);</span><br><span class="line">            <span class="keyword">return</span> Json(<span class="keyword">new</span> &#123; </span><br><span class="line">                issuccess = <span class="literal">true</span>, sha1value = GetSHA1Value(hexString),</span><br><span class="line">                timestamp = timestamp, url = url,</span><br><span class="line">                appid = appid, debug = isDedug,tiket = _ticket</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">string</span> <span class="title">GetSHA1Value</span>(<span class="params"><span class="keyword">string</span> sourceString</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> hash = SHA1.Create().ComputeHash(Encoding.UTF8.GetBytes(sourceString));</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">string</span>.Join(<span class="string">""</span>, </span><br><span class="line">        hash.Select(b =&gt; b.ToString(<span class="string">"x2"</span>)).ToArray());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">string</span> <span class="title">GetTimeStamp</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line"></span><br><span class="line">        TimeSpan ts = DateTime.Now - <span class="keyword">new</span> DateTime(<span class="number">1970</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> Convert.ToInt64(ts.TotalSeconds).ToString();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">HTTPHelper</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">string</span> <span class="title">GetHTMLByURL</span>(<span class="params"><span class="keyword">string</span> url</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">string</span> htmlCode = <span class="keyword">string</span>.Empty;</span><br><span class="line">        <span class="keyword">try</span></span><br><span class="line">        &#123;</span><br><span class="line">            HttpWebRequest webRequest = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(url);</span><br><span class="line">            webRequest.Timeout = <span class="number">30000</span>;</span><br><span class="line">            webRequest.Method = <span class="string">"GET"</span>;</span><br><span class="line">            webRequest.UserAgent = <span class="string">"Mozilla/4.0"</span>;</span><br><span class="line">            webRequest.Headers.Add(<span class="string">"Accept-Encoding"</span>, <span class="string">"gzip, deflate"</span>);</span><br><span class="line">            HttpWebResponse webResponse = (System.Net.HttpWebResponse)webRequest.GetResponse();</span><br><span class="line">            <span class="comment">//获取目标网站的编码格式</span></span><br><span class="line">            <span class="keyword">string</span> contentype = webResponse.Headers[<span class="string">"Content-Type"</span>];</span><br><span class="line">            Regex regex = <span class="keyword">new</span> Regex(<span class="string">"charset\\s*=\\s*[\\W]?\\s*([\\w-]+)"</span>, RegexOptions.IgnoreCase);</span><br><span class="line">            <span class="keyword">if</span> (webResponse.ContentEncoding.ToLower() == <span class="string">"gzip"</span>)<span class="comment">//如果使用了GZip则先解压</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">using</span> (System.IO.Stream streamReceive = webResponse.GetResponseStream())</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">using</span> (<span class="keyword">var</span> zipStream = <span class="keyword">new</span> System.IO.Compression.GZipStream(streamReceive, System.IO.Compression.CompressionMode.Decompress))</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="comment">//匹配编码格式</span></span><br><span class="line">                        <span class="keyword">if</span> (regex.IsMatch(contentype))</span><br><span class="line">                        &#123;</span><br><span class="line">                            Encoding ending = Encoding.GetEncoding</span><br><span class="line">                            (regex.Match(contentype).Groups[<span class="number">1</span>].Value.Trim());</span><br><span class="line">                            <span class="keyword">using</span> (StreamReader sr = <span class="keyword">new</span> System.IO.StreamReader(zipStream, ending))</span><br><span class="line">                            &#123;</span><br><span class="line">                                htmlCode = sr.ReadToEnd();</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">else</span></span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="keyword">using</span> (StreamReader sr = <span class="keyword">new</span> System.IO.StreamReader(zipStream, Encoding.UTF8))</span><br><span class="line">                            &#123;</span><br><span class="line">                                htmlCode = sr.ReadToEnd();</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">using</span> (System.IO.Stream streamReceive = webResponse.GetResponseStream())</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">var</span> encoding = Encoding.Default;</span><br><span class="line">                    <span class="keyword">if</span> (contentype.Contains(<span class="string">"utf"</span>))</span><br><span class="line">                        encoding = Encoding.UTF8;</span><br><span class="line">                    <span class="keyword">using</span> (System.IO.StreamReader sr = <span class="keyword">new</span> System.IO.StreamReader(streamReceive, encoding))</span><br><span class="line">                    &#123;</span><br><span class="line">                        htmlCode = sr.ReadToEnd();</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> htmlCode;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>PS：这里要注意缓存一下_ticket（即access_token），照微信文档说的，access_token两个小时内有效，不需要频繁调用。而且获取access_token的接口有调用次数的限制，如果超过了次数，就不允许调用了。</p>
+<p>PPS:建议noncestr和URL由前台传入比较适合，使用 var theWebUrl = window.location.href.split(‘#’)[0] 获取URL，noncestr就随意了。</p>
+<p>PPPS:遇到诡异的invalid signature的时候，首先检查url参数，然后检查noncestr，再不行重启一下程序获取一个新的token回来继续玩。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://codelover.link/2016/10/22/javascript_requirejs_rf_code/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李国宝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="codelover">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/10/22/javascript_requirejs_rf_code/" itemprop="url">使用requirejs编写模块化代码</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-22T00:00:00+08:00">
+                2016-10-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>最早接触javascript的时候，javascript代码直接扔在script标签里面就完事了。</p>
+<p>反正代码不多，交互简单，逻辑不难，和HTML混在一起也未尝不可。</p>
+<p>后来交互越来越复杂，代码越多越多了，我们就开始把JS代码独立到了单独的JS文件中。</p>
+<p>公共的库引用在前，自己的逻辑代码引用在后，全局变量定义在HTML内部，在独立JS文件中直接使用变量就好。</p>
+<p>我们会经常看到下面这种代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">　　&lt;script src=&quot;1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">　　&lt;script src=&quot;2.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">　　&lt;script src=&quot;3.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">　　&lt;script src=&quot;4.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">　　&lt;script src=&quot;5.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">　　&lt;script src=&quot;6.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>通过script标签顺序去js管理依赖关系。</p>
+<p>阮一峰老师在<a href="http://www.ruanyifeng.com/blog/2012/11/require_js.html" target="_blank" rel="noopener">Javascript模块化编程（三）：require.js的用法</a><br>一文中总结了这样写法的缺点：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">首先，加载的时候，浏览器会停止网页渲染，加载文件越多，网页失去响应的时间就会越长；</span><br><span class="line"></span><br><span class="line">其次，由于js文件之间存在依赖关系，因此必须严格保证加载顺序（比如上例的1.js要在2.js的前面），依赖性最大的模块一定要放到最后加载.</span><br><span class="line"></span><br><span class="line">当依赖关系很复杂的时候，代码的编写和维护都会变得困难。</span><br></pre></td></tr></table></figure></p>
+<p>而requirejs的诞生便是为了解决这个问题。</p>
+<h3 id="requirejs"><a href="#requirejs" class="headerlink" title="requirejs"></a><a href="http://requirejs.org/docs/download.html" target="_blank" rel="noopener">requirejs</a></h3><p>在<a href="http://requirejs.org/docs/download.html" target="_blank" rel="noopener">官网</a>把requirejs 下载回来之后。使用一般的方法引入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;js/require.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>但是这样的方法，还是可能在加载require.js的时候导致网页失去响应。解决方案一般有两种：</p>
+<ol>
+<li><p>把上面的代码放到网页底部</p>
+</li>
+<li><p>使用异步的方法加载，如下：</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;js/require.js&quot; defer async=&quot;true&quot; &gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p><a href="http://www.w3school.com.cn/html5/att_script_async.asp" target="_blank" rel="noopener">async属性</a> 表明这个文件需要异步加载，避免网页失去响应。</p>
+<p>不过IE下不支持这个属性，只支持defer，所以可以把defer也写上。</p>
+<h3 id="加载主模块"><a href="#加载主模块" class="headerlink" title="加载主模块"></a>加载主模块</h3><p>在上一步，我们已经引入了require了，那么require怎么知道我们究竟要加载什么东西呢？答案是使用data-main属性。<br>假设我们的主模块为js/home.js,引入代码应该如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">　&lt;script src=&quot;js/require.js&quot; data-main=&quot;js/home&quot;&gt;&lt;/script&gt;</span><br><span class="line">//require.js默认文件后缀为js，所以home.js可以写成home。</span><br></pre></td></tr></table></figure></p>
+<p>接下来我使用<a href="https://github.com/liguobao/58HouseSearch" target="_blank" rel="noopener">58HouseSearch</a> 的代码来讲解重构过程。</p>
+<p>在此项目里面，重构前大概就是JS变量漫天飞，js文件里面各种函数到处乱放。一开始用起来还没什么，后来加入了更多功能的时候，JS代码维护起来就疼不欲生了。因此托了个小伙伴帮忙使用模块化思想重构了一下JS代码。</p>
+<p>上面说了，我们首先需要创建我们的模块，在这个项目里面，主模块叫home.js。</p>
+<p>home.js中我们需要配置一下require.config.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">require.config(&#123;</span><br><span class="line">    baseUrl: &apos;/DomainJS/&apos;,</span><br><span class="line">    paths: &#123;</span><br><span class="line">        jquery: &quot;lib/jquery-1.11.3.min&quot;,</span><br><span class="line">        &quot;AMUI&quot;: &quot;lib/amazeui.2.7.1.min&quot;,</span><br><span class="line">        &quot;jquery.range&quot;: &quot;lib/jquery.range&quot;,</span><br><span class="line">        &quot;es5&quot;: &quot;lib/es5&quot;,</span><br><span class="line">        &quot;mapController&quot;: &quot;mapController&quot;,</span><br><span class="line">        &quot;addToolbar&quot;: &quot;addToolbar&quot;,</span><br><span class="line">    &#125;,</span><br><span class="line">    shim: &#123;</span><br><span class="line">        &quot;addToolbar&quot;: &#123;</span><br><span class="line">            deps: [&quot;jquery&quot;]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;jquery.range&quot;: &#123;</span><br><span class="line">            deps: [&quot;jquery&quot;]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>在这里我主要配置了一下baseURL(所有模块的查找根路径)，paths(名称映射)，shim(<br>为那些没有使用define()来声明依赖关系、设置模块的”浏览器全局变量注入”型脚本做依赖和导出配置。)</p>
+<p>关于require.config的详细内容可以看下下面这些文章：</p>
+<ol>
+<li><a href="https://segmentfault.com/a/1190000002401665" target="_blank" rel="noopener">RequireJS进阶:配置文件的学习</a> </li>
+<li><a href="https://segmentfault.com/a/1190000002403806" target="_blank" rel="noopener">RequireJS进阶:模块的优化及配置的详解</a></li>
+</ol>
+<p>配置做完了，我们也可以开始真正写我们的逻辑代码了,我们使用require来加载我们需要的库。<br>代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">require([&apos;domready!&apos;, &apos;jquery&apos;, &apos;AMUI&apos;, &apos;mapController&apos;, &apos;city&apos;, &apos;commuteGo&apos;], function (doc, $, AMUI, mapController, city, commuteGo) &#123;</span><br><span class="line">    city.initAllCityInfo();</span><br><span class="line">    mapController.init();</span><br><span class="line"></span><br><span class="line">    $(&quot;input[name=&apos;locationType&apos;]&quot;).bind(&apos;click&apos;, mapController.locationMethodOnChange)</span><br><span class="line"></span><br><span class="line">    $(&quot;input[name=&apos;vehicle&apos;]&quot;).bind(&apos;click&apos;, commuteGo.go)</span><br><span class="line"></span><br><span class="line">    $(&apos;#Get58Data&apos;).bind(&apos;click&apos;, function(e) &#123;</span><br><span class="line">        e.preventDefault();</span><br><span class="line">     </span><br><span class="line">        mapController.Get58DataClick();</span><br><span class="line">        e.stopPropagation();</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        type: &quot;post&quot;,</span><br><span class="line">        url: &quot;../Commom/GetPVCount&quot;,</span><br><span class="line">        data: &#123; &#125;,</span><br><span class="line">        success: function (result)</span><br><span class="line">        &#123;</span><br><span class="line">            if (result.IsSuccess)&#123;</span><br><span class="line">                $(&quot;#lblPVCount&quot;).text(result.PVCount);</span><br><span class="line">            &#125;else &#123;</span><br><span class="line">                $(&quot;#lblPVCount&quot;).text(0);</span><br><span class="line">                console.log(result.Error);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    $(&apos;#search-offcanvas&apos;).offCanvas(&#123; effect: &apos;overlay&apos; &#125;);</span><br><span class="line"></span><br><span class="line">    $(&quot;.amap-sug-result&quot;).css(&quot;z-index&quot;, 9999);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>忽略function里面的具体逻辑，加载如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">require([&apos;domready!&apos;, &apos;jquery&apos;, &apos;AMUI&apos;, &apos;mapController&apos;, &apos;city&apos;, &apos;commuteGo&apos;], </span><br><span class="line">function (doc, $, AMUI, mapController, city, commuteGo)&#123;</span><br><span class="line"></span><br><span class="line">//todo</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>第一个参数为一个数组，表示所依赖的模块，此处为[‘domready!’, ‘jquery’, ‘AMUI’, ‘mapController’, ‘city’, ‘commuteGo’]；</p>
+<p>第二个参数为回调函数，当前面指定的模块都全部加载成功之后，便调用此函数。加载的模块会以参数形式传入此函数，从而在回调函数内部就可以使用这些模块啦。</p>
+<p>require()异步加载所需模块的时候，此时浏览器并不会失去响应；当前面的模块加载成功之后，执行回调函数才会运行我们的逻辑代码，因此解决了依赖性问题。</p>
+<p>讲完了模块加载，我们下面讲一下模块编写。</p>
+<h3 id="AMD模块编写"><a href="#AMD模块编写" class="headerlink" title="AMD模块编写"></a>AMD模块编写</h3><p>require.js加载的模块的采用的AMD规范。所以我们的模块必须按照AMD的规定来写。</p>
+<p>关于AMD规范详情可以看这个文章：<a href="http://www.ruanyifeng.com/blog/2012/10/asynchronous_module_definition.html" target="_blank" rel="noopener">Javascript模块化编程（二）：AMD规范</a></p>
+<p>模块有两个情况，不依赖其他模块和依赖其他模块。</p>
+<h4 id="不依赖其他模块"><a href="#不依赖其他模块" class="headerlink" title="不依赖其他模块"></a>不依赖其他模块</h4><p>直接define定义，使用function回调。</p>
+<p><a href="https://github.com/liguobao/58HouseSearch/blob/master/58HouseSearch/DomainJS/helper.js" target="_blank" rel="noopener">58HouseSearch/DomainJS/helper.js</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">define(function () &#123;</span><br><span class="line"></span><br><span class="line">    //获取URL中的参数</span><br><span class="line">    var getQueryString=  function (name) &#123;</span><br><span class="line">        var reg = new RegExp(&quot;(^|&amp;)&quot; + name + &quot;=([^&amp;]*)(&amp;|$)&quot;);</span><br><span class="line">        var r = window.location.search.substr(1).match(reg);</span><br><span class="line">        if (r != null) return unescape(r[2]); return null;</span><br><span class="line">    &#125;</span><br><span class="line">    return &#123;</span><br><span class="line">        getQueryString: getQueryString,</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h4 id="依赖其他模块"><a href="#依赖其他模块" class="headerlink" title="依赖其他模块"></a>依赖其他模块</h4><p>define中如同require一样，用数组表明需要加载的模块，function回调。</p>
+<p><a href="https://github.com/liguobao/58HouseSearch/blob/master/58HouseSearch/DomainJS/marker.js" target="_blank" rel="noopener">58HouseSearch/DomainJS/marker.js</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">define([&apos;mapSignleton&apos;, &apos;city&apos;, &apos;transfer&apos;], function(mapSignleton, city, transfer) &#123;</span><br><span class="line">    var _map = mapSignleton.map;</span><br><span class="line">    var _workMarker = null;</span><br><span class="line">    var _markerArray = [];</span><br><span class="line">    var load = function(x, y, locationName) &#123;</span><br><span class="line">        _workMarker = new AMap.Marker(&#123;</span><br><span class="line">            map: _map,</span><br><span class="line">            title: locationName,</span><br><span class="line">            icon: &apos;http://webapi.amap.com/theme/v1.3/markers/n/mark_r.png&apos;,</span><br><span class="line">            position: [x, y]</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    var add = function(address, rent, href, markBG) &#123;</span><br><span class="line">        new AMap.Geocoder(&#123;</span><br><span class="line">            city: city.name,</span><br><span class="line">            radius: 1000</span><br><span class="line">        &#125;).getLocation(address, function(status, result) &#123;</span><br><span class="line"></span><br><span class="line">            if (status === &quot;complete&quot; &amp;&amp; result.info === &apos;OK&apos;) &#123;</span><br><span class="line">                var geocode = result.geocodes[0];</span><br><span class="line">                var rentMarker = new AMap.Marker(&#123;</span><br><span class="line">                    map: _map,</span><br><span class="line">                    title: address,</span><br><span class="line">                    icon: markBG ? &apos;IMG/Little/&apos; + markBG : &apos;http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png&apos;,</span><br><span class="line">                    position: [geocode.location.getLng(), geocode.location.getLat()]</span><br><span class="line">                &#125;);</span><br><span class="line">                _markerArray.push(rentMarker);</span><br><span class="line"></span><br><span class="line">                rentMarker.content = &quot;&lt;div&gt;&lt;a target = &apos;_blank&apos; href=&apos;&quot; + href + &quot;&apos;&gt;房源：&quot; + address + &quot;  租金：&quot; + rent + &quot;&lt;/a&gt;&lt;div&gt;&quot;</span><br><span class="line">                rentMarker.on(&apos;click&apos;, function(e) &#123;</span><br><span class="line">                    transfer.add(e, address);</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    var clearArray = function() &#123;</span><br><span class="line">        if (_markerArray &amp;&amp; _markerArray.length &gt; 0) _map.remove(_markerArray);</span><br><span class="line">        _markerArray = [];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    var clear = function() &#123;</span><br><span class="line">        if (_workMarker) &#123;</span><br><span class="line">            _map.remove(_workMarker);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return &#123;</span><br><span class="line">        load: load,</span><br><span class="line">        add: add,</span><br><span class="line">        clearArray: clearArray,</span><br><span class="line">        clear: clear</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>这样的话，一个供require调用的模块也就写好了。</p>
+<p>最后感谢小伙伴<a href="https://www.zhihu.com/people/piratf" target="_blank" rel="noopener">Larry Sean</a> 帮忙重构代码。</p>
+<p>全文完。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://codelover.link/2016/10/15/一些有用的网站/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李国宝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="codelover">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/10/15/一些有用的网站/" itemprop="url">备忘网站</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-15T14:08:53+08:00">
+                2016-10-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/memorandum/" itemprop="url" rel="index">
+                    <span itemprop="name">memorandum</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="备忘网站"><a href="#备忘网站" class="headerlink" title="备忘网站"></a>备忘网站</h1><h2 id="Markdown-语法说明-简体中文版"><a href="#Markdown-语法说明-简体中文版" class="headerlink" title="Markdown 语法说明 (简体中文版)"></a><a href="http://wowubuntu.com/markdown/" target="_blank" rel="noopener">Markdown 语法说明 (简体中文版)</a></h2><h2 id="Markdown-Basics-（快速入门）"><a href="#Markdown-Basics-（快速入门）" class="headerlink" title="Markdown: Basics （快速入门）"></a><a href="http://wowubuntu.com/markdown/basic.html" target="_blank" rel="noopener">Markdown: Basics （快速入门）</a></h2><h2 id="使用GitHub和Hexo搭建免费静态Blog-本博客案例"><a href="#使用GitHub和Hexo搭建免费静态Blog-本博客案例" class="headerlink" title="使用GitHub和Hexo搭建免费静态Blog(本博客案例)"></a><a href="http://wsgzao.github.io/post/hexo-guide/" target="_blank" rel="noopener">使用GitHub和Hexo搭建免费静态Blog(本博客案例)</a></h2><p>###安装Hexo</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">npm install hexo --save</span><br><span class="line"></span><br><span class="line"><span class="comment">#如果命令无法运行，可以尝试更换taobao的npm源</span></span><br><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<h3 id="安装Hexo插件"><a href="#安装Hexo插件" class="headerlink" title="安装Hexo插件"></a>安装Hexo插件</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-archive --save</span><br><span class="line">npm install hexo-generator-category --save</span><br><span class="line">npm install hexo-generator-tag --save</span><br><span class="line">npm install hexo-server --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-deployer-heroku --save</span><br><span class="line">npm install hexo-deployer-rsync --save</span><br><span class="line">npm install hexo-deployer-openshift --save</span><br><span class="line">npm install hexo-renderer-marked@0.2 --save</span><br><span class="line">npm install hexo-renderer-stylus@0.2 --save</span><br><span class="line">npm install hexo-generator-feed@1 --save</span><br><span class="line">npm install hexo-generator-sitemap@1 --save</span><br></pre></td></tr></table></figure>
+<h2 id="win下面的git客户端提示FIlename-too-long解决方法"><a href="#win下面的git客户端提示FIlename-too-long解决方法" class="headerlink" title="win下面的git客户端提示FIlename too long解决方法"></a><a href="https://www.mxgw.info/t/filename-too-long-in-git.html" target="_blank" rel="noopener">win下面的git客户端提示FIlename too long解决方法</a></h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.longpaths <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h2 id="git-ssh-配置和使用"><a href="#git-ssh-配置和使用" class="headerlink" title="git-ssh 配置和使用"></a><a href="https://segmentfault.com/a/1190000002645623" target="_blank" rel="noopener">git-ssh 配置和使用</a></h2>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://codelover.link/2016/10/15/Can't_install_Preview2_on_fresh_VS2015_Update3_Installation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李国宝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="codelover">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/10/15/Can't_install_Preview2_on_fresh_VS2015_Update3_Installation/" itemprop="url">Microsoft .NET Core 1.0.0 VS 2015 Tooling Preview 2 0x80070003</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-15T13:58:21+08:00">
+                2016-10-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/dotnet-core/" itemprop="url" rel="index">
+                    <span itemprop="name">dotnet core</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>最近安装Microsoft .NET Core 1.0.0 VS 2015 Tooling Preview 2实在有点曲折，忍不住写个文章来讲这货的坑爹之旅了。</p>
+<p>一般我们在<a href="https://www.microsoft.com/net/download" target="_blank" rel="noopener">.NET Downloads</a> 下载回来的Microsoft .NET Core 1.0.0 VS 2015 Tooling Preview 2是一个简易安装包。</p>
+<p>它在安装过程中会不断去网络请求需要的msi文件，美名曰：在线安装。</p>
+<p>然而在我国的国情以及我国网络运营商的衬托下，在线安装这种东西实在不可恭维。</p>
+<p>本来网络稳定，在线安装 这种鬼也还算能用，不过最近微软爸爸不知道为嘛了，.net core相关安装包的下载地址全线失效。<br>如<a href="https://download.microsoft.com/download/0/A/3/0A372822-205D-4A86-BFA7-084D2CBE9EDF/DotNetCore.1.0.1-SDK.1.0.0.Preview2-003133-x64.exe" target="_blank" rel="noopener">DotNetCore.1.0.1-SDK.1.0.0.Preview2-003133-x64.exe</a>，直接出502 Bad Gateway。</p>
+<p>这个还能用迅雷或者命令行下载回来，但是DotNetCore.1.0.1-SDK.1.0.0.Preview2这货安装过程中需要的一下msi安装包，就死活下不回来了。</p>
+<h4 id="安装过程报错：0x80070003-系统找不到需要的文件。"><a href="#安装过程报错：0x80070003-系统找不到需要的文件。" class="headerlink" title="安装过程报错：0x80070003 系统找不到需要的文件。"></a>安装过程报错：0x80070003 系统找不到需要的文件。</h4><p>此处已确认是微软爸爸的bug了。<a href="https://github.com/aspnet/Tooling/issues/655" target="_blank" rel="noopener">issue在这里</a></p>
+<h4 id="分析log"><a href="#分析log" class="headerlink" title="分析log"></a>分析log</h4><p>我们去看安装失败的log，能看到类似下面的log：</p>
+<p>Error 0x80072efd: Failed attempt to download URL: ‘<a href="https://download.microsoft.com/download/A/3/8/A38489F3-9777-41DD-83F8-2CBDFAB2520C/packages/ancm_iis_express_x64_en_rc2_39.msi&#39;" target="_blank" rel="noopener">https://download.microsoft.com/download/A/3/8/A38489F3-9777-41DD-83F8-2CBDFAB2520C/packages/ancm_iis_express_x64_en_rc2_39.msi&#39;</a> to: ‘C:\Users\cneuss\AppData\Local\Temp{C307771D-8D9A-45B5-B514-B6CA69C0C6E2}\ANCM_IISExpress_x64’</p>
+<p>很明显这个操作从</p>
+<p><a href="https://download.microsoft.com/download/A/3/8/A38489F3-9777-41DD-83F8-2CBDFAB2520C/packages/ancm_iis_express_x64_en_rc2_39.msi" target="_blank" rel="noopener">https://download.microsoft.com/download/A/3/8/A38489F3-9777-41DD-83F8-2CBDFAB2520C/packages/ancm_iis_express_x64_en_rc2_39.msi</a></p>
+<p>上面下载ancm_iis_express_x64_en_rc2_39.msi文件。</p>
+<p>然而我们点击进去，看到这个同样的问题：502 Bad Gateway。</p>
+<p>安装到这里，已经GG了。</p>
+<p>不过既然知道是因为下载文件的问题了，那么解决办法也应运而生了。</p>
+<p>我们完全手动下载文件（用迅雷或者别的下载工具），发布在本地，改hosts地址让下载请求直接从本地下载文件。</p>
+<p>这个方案听起来是没有任何的问题的，我也成功使用迅雷把无法下载的文件下载到本地了。然而在改host地址这里卡住了。</p>
+<p>不知道为嘛，无论我把<a href="download.microsoft.com">download.microsoft.com</a>指向怎么改，也无法把请求重定向到本地。</p>
+<p>后来认真看了下安装log，发现所以的下载操作都是把文件下载到 C:\Users\cneuss\AppData\Local\Temp 目录（具体目录看log文件内容）下的临时路径，报错是系统找不到需要的文件。</p>
+<p>那么，我们手动把需要的文件放到对应的位置，问题也就解决了。</p>
+<p>所以，为了清晰找到临时路径，安装之前先把“C:\Users\cneuss\AppData\Local\Temp”的文件清空，然后点击安装包。</p>
+<p>很快可以在temp路径下看到冒出来的{xxxxxxxxxxxxx}文件夹，然后迅速把我们通过迅雷下载回来的文件仍到这个目录底下。</p>
+<p>迅速操作的原因是，在线安装包正在下载所需要的文件，如：ancm_iis_express_x64_en_rc2_39.msi，我们要在下载超时之前把文件应该在的位置，这样的话即使下载没拿到文件，安装程序还是可以拿我们的文件去执行安装。</p>
+<p>别的就是不断尝试，看缺少那个msi手动下哪个msi的事情了。</p>
+<h4 id="最终方案"><a href="#最终方案" class="headerlink" title="最终方案"></a>最终方案</h4><p>最后，根据log文件，还发现了一个更简单的方法：</p>
+<p>在DotNetCore.1.0.1-SDK.1.0.0.Preview2-003133-x64.exe的同级目录下新建packages文件夹，把上面无法在线下载到的msi仍进去，然后就一路绿灯了。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://codelover.link/2016/10/15/some_script/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李国宝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="codelover">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/10/15/some_script/" itemprop="url">一些有用的脚本</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-15T00:06:11+08:00">
+                2016-10-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/sctripts/" itemprop="url" rel="index">
+                    <span itemprop="name">sctripts</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="一些有用的脚本"><a href="#一些有用的脚本" class="headerlink" title="一些有用的脚本"></a>一些有用的脚本</h1><h2 id="获取电池使用情况报告-battery-report-电池历史记录"><a href="#获取电池使用情况报告-battery-report-电池历史记录" class="headerlink" title="获取电池使用情况报告(battery-report)-电池历史记录"></a>获取电池使用情况报告(battery-report)-电池历史记录</h2><p>来源：<a href="http://answers.microsoft.com/zh-hans/windows/wiki/windows_10-performance/%E8%8E%B7%E5%8F%96%E7%94%B5%E6%B1%A0%E4%BD%BF/2d025ee0-8529-45a0-a5ae-46aa5e67f8e8" target="_blank" rel="noopener">获取电池使用情况报告(battery-report)-电池历史记录</a></p>
+<ol>
+<li>点击任务栏搜索框，搜索：POWERSHELL</li>
+<li>鼠标右键点击搜索结果中的“Windows Powershell”，点击“以管理员身份运行”</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$HTML=[System.Environment]::GetFolderPath('Desktop')+"\"+(Get-Date -Format 'yyyy-MM-dd')+"-电池记录.html";POWERCFG /BATTERYREPORT /OUTPUT "$HTML";$TF=Get-Content "$HTML";$TF| %&#123;$_.Replace("Battery report","电池报告")&#125;| %&#123;$_.Replace("COMPUTER NAME","计算机名")&#125;| %&#123;$_.Replace("SYSTEM PRODUCT NAME","计算机型号")&#125;| %&#123;$_.Replace("OS BUILD","操作系统内部版本")&#125;| %&#123;$_.Replace("PLATFORM ROLE","平台角色")&#125;| %&#123;$_.Replace("CONNECTED STANDBY","InstantGo（连接待机）")&#125;| %&#123;$_.Replace("REPORT TIME","报告时间")&#125;| %&#123;$_.Replace("Installed batteries","已安装的电池")&#125;| %&#123;$_.Replace("Information about each currently installed battery","查看当前已安装电池的信息")&#125;| %&#123;$_.Replace("NAME","名称")&#125;| %&#123;$_.Replace("MANUFACTURER","制造商")&#125;| %&#123;$_.Replace("SERIAL NUMBER","序列号")&#125;| %&#123;$_.Replace("CHEMISTRY","化学成分")&#125;| %&#123;$_.Replace("AT DESIGN CAPACITY","设计容量时")&#125;| %&#123;$_.Replace("DESIGN CAPACITY","设计容量")&#125;| %&#123;$_.Replace("FULL CHARGE CAPACITY","完全充电容量")&#125;| %&#123;$_.Replace("CYCLE COUNT","循环计数")&#125;| %&#123;$_.Replace("Recent usage","最近使用情况")&#125;| %&#123;$_.Replace("Power states over the last 3 days","过去72小时内的电源状态")&#125;| %&#123;$_.Replace("START TIME","开始时间")&#125;| %&#123;$_.Replace("STATE","状态")&#125;| %&#123;$_.Replace("SOURCE","电源")&#125;| %&#123;$_.Replace("CAPACITY REMAINING","剩余容量")&#125;| %&#123;$_.Replace("Battery usage","电池使用情况")&#125;| %&#123;$_.Replace("Battery drains over the last 3 days","过去72小时内的电池消耗")&#125;| %&#123;$_.Replace("DURATION","使用时间")&#125;| %&#123;$_.Replace("ENERGY DRAINED","消耗的能量")&#125;| %&#123;$_.Replace("Usage history","使用历史记录")&#125;| %&#123;$_.Replace("History of system usage on AC and battery","有关交流电源和电池的使用记录")&#125;| %&#123;$_.Replace("BATTERY DURATION","电池使用时间")&#125;| %&#123;$_.Replace("AC DURATION ","交流电源使用时间")&#125;| %&#123;$_.Replace("PERIOD","周期")&#125;| %&#123;$_.Replace("ACTIVE","活动")&#125;| %&#123;$_.Replace("Battery capacity history","电池设计容量历史记录")&#125;| %&#123;$_.Replace("Charge capacity history of the system's batteries","电池充电能力历史记录")&#125;| %&#123;$_.Replace("Battery life estimates based on observed drains","以观察到的消耗情况预计电池寿命")&#125;| %&#123;$_.Replace("Battery life estimates","预计电池寿命")&#125;| %&#123;$_.Replace("AT FULL CHARGE","完全充电时")&#125;| %&#123;$_.Replace("Current estimate of battery life based on all observed drains since OS install","以操作系统安装后所有观察到的消耗记录为基础预计的当前电池寿命")&#125;| %&#123;$_.Replace("Since OS install","从操作系统安装后")&#125;| %&#123;$_.Replace("Supported","支持")&#125;| %&#123;$_.Replace("Not supported","不支持")&#125;| %&#123;$_.Replace("BATTERY","电池")&#125;| %&#123;$_.Replace("Suspended","已暂停")&#125;| %&#123;$_.Replace("Active","活动")&#125;| %&#123;$_.Replace("Unspecified","未知")&#125;| %&#123;$_.Replace("Mobile","移动")&#125;| %&#123;$_.Replace("Desktop","桌面")&#125;| %&#123;$_.Replace("Workstation","工作站")&#125;| %&#123;$_.Replace("Report generated","生成当前报告")&#125;| %&#123;$_.Replace("Battery","电池")&#125;| %&#123;$_.Replace("AC","交流电源")&#125;|Out-File "$HTML";pause</span><br></pre></td></tr></table></figure>
           
         
       
@@ -347,6 +2028,10 @@
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -379,7 +2064,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-author-name" itemprop="name">李国宝</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -390,20 +2075,48 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/liguobao" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -435,13 +2148,13 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">李国宝</span>
 
   
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -449,7 +2162,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 

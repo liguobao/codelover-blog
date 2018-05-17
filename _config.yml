@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: codelover
+title: codelover的异想天开
 subtitle:
-description:
-keywords:
+description: 一只打算吃软饭的软狗
+keywords: 一只打算吃软饭的软狗
 author: 李国宝
 language: zh-Hans
-timezone:
+timezone: 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'

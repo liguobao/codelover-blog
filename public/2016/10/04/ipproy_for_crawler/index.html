@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java,开源," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="写在前面做爬虫的小伙伴一般都绕不过代理IP这个问题. PS:如果还没遇到被封IP的场景，要不就是你量太小人家懒得理你，要不就是人家压根不在乎… 爬虫用户自己是没有能力维护一系列的代理服务器和代理IP的，这个成本实在有点高了。所以公用代理服务器应运而生,现在几大云服务商家都提供代理IP服务，一般论个买… 同时网上也有很多代理IP共享网站，会把一些免费的代理IP放出来给大家用。大家都是做爬虫的，那么，">
+<meta name="keywords" content="Java,开源">
+<meta property="og:type" content="article">
+<meta property="og:title" content="可能是一份没什么用的爬虫代理IP指南">
+<meta property="og:url" content="http://codelover.link/2016/10/04/ipproy_for_crawler/index.html">
+<meta property="og:site_name" content="codelover">
+<meta property="og:description" content="写在前面做爬虫的小伙伴一般都绕不过代理IP这个问题. PS:如果还没遇到被封IP的场景，要不就是你量太小人家懒得理你，要不就是人家压根不在乎… 爬虫用户自己是没有能力维护一系列的代理服务器和代理IP的，这个成本实在有点高了。所以公用代理服务器应运而生,现在几大云服务商家都提供代理IP服务，一般论个买… 同时网上也有很多代理IP共享网站，会把一些免费的代理IP放出来给大家用。大家都是做爬虫的，那么，">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-05-17T07:59:54.948Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="可能是一份没什么用的爬虫代理IP指南">
+<meta name="twitter:description" content="写在前面做爬虫的小伙伴一般都绕不过代理IP这个问题. PS:如果还没遇到被封IP的场景，要不就是你量太小人家懒得理你，要不就是人家压根不在乎… 爬虫用户自己是没有能力维护一系列的代理服务器和代理IP的，这个成本实在有点高了。所以公用代理服务器应运而生,现在几大云服务商家都提供代理IP服务，一般论个买… 同时网上也有很多代理IP共享网站，会把一些免费的代理IP放出来给大家用。大家都是做爬虫的，那么，">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://codelover.link/2016/10/04/ipproy_for_crawler/"/>
+
+
+
+
+
+  <title>可能是一份没什么用的爬虫代理IP指南 | codelover</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">codelover</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://codelover.link/2016/10/04/ipproy_for_crawler/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李国宝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="codelover">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">可能是一份没什么用的爬虫代理IP指南</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-04T00:00:00+08:00">
+                2016-10-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ipproxy/" itemprop="url" rel="index">
+                    <span itemprop="name">ipproxy</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>做爬虫的小伙伴一般都绕不过代理IP这个问题.</p>
+<p>PS:如果还没遇到被封IP的场景，要不就是你量太小人家懒得理你，要不就是人家压根不在乎…</p>
+<p>爬虫用户自己是没有能力维护一系列的代理服务器和代理IP的，这个成本实在有点高了。<br>所以公用代理服务器应运而生,现在几大云服务商家都提供代理IP服务，一般论个买…</p>
+<p>同时网上也有很多代理IP共享网站，会把一些免费的代理IP放出来给大家用。<br>大家都是做爬虫的，那么，是不是可以先把代理IP网站的数据爬一遍？<br>所以可以看到不少的爬代理IP的爬虫，如<a href="https://zhuanlan.zhihu.com/p/23928595" target="_blank" rel="noopener">突破反爬虫的利器——开源IP代理池</a>之类的项目。<br>这些项目都能达到抓取代理IP数据的目的，很多时候也够用了。</p>
+<p>然而在使用过程中我们发现了一些问题：</p>
+<ol>
+<li>网站公布的代理IP不一定是可用的。可能代理服务器挂了，可能IP无效了…等等之类的。</li>
+<li>代理IP是部分可用的。某代理IP可用代理访问百度，但是代理访问谷歌的时候就GG了。</li>
+<li>代理连通性是好的，但是已经被访问站识别为代理IP返回验证码或者辣鸡数据。</li>
+</ol>
+<h2 id="proxyipcenter的解决方案"><a href="#proxyipcenter的解决方案" class="headerlink" title="proxyipcenter的解决方案"></a>proxyipcenter的解决方案</h2><p>出于以上种种的原因，按耐不住的dalao(@<a href="https://www.zhihu.com/people/virjar" target="_blank" rel="noopener">virjar</a>)开始自己动手撸了。</p>
+<p>于是，<a href="http://git.oschina.net/virjar/proxyipcenter" target="_blank" rel="noopener">proxyipcenter</a>出来了。</p>
+<p>这个项目做了什么东西呢？<br>dalao是这样写的：</p>
+<blockquote>
+<p>DungProxy是一个代理IP服务,他包括一个代理IP资源server端和一系列适配中心IP资源得客户端。</p>
+<p>server负责代理IP资源的收集维护。</p>
+<p>client则是一系列方便用户使用得API,他屏蔽了代理IP下载、代理IP选取、IP绑定、IP切换等比较复杂逻辑。用户只需要引入client即可方便使用代理IP服务</p>
+</blockquote>
+<p>简单来说：</p>
+<p>server是一个代理IP爬虫，同时负责简单的数据清洗。</p>
+<p>client本质是一个代理IP池，获取数据源之后，基于需要代理访问的网站在本地维护一个代理IP池供爬虫使用。</p>
+<p>以下内容转载自<a href="http://git.oschina.net/virjar/proxyipcenter/edit/master/doc/server/deploy/README.md" target="_blank" rel="noopener">http://git.oschina.net/virjar/proxyipcenter</a>,<br>并已获得相关授权。(PS:dalao写的太好了，我都懒得重新写一遍了…问过dalao之后直接转载过来算了。)</p>
+<h2 id="proxyipcenter-server"><a href="#proxyipcenter-server" class="headerlink" title="proxyipcenter server"></a>proxyipcenter server</h2><p>DrungProxy的代理IP都是从互联网收集,他是架设在一个高度不可用的资源上面的服务。server会负责对这些资源进行清洗、校验、打分,最终输出可以被客户端使用的IP资源。IP资源从入库到最终判定可用生命流程如下</p>
+<ol>
+<li>IP抓取<br> server监听了很多代理IP网站,这些网站包括国内外十几家,有意思的是drungProxy的IP爬虫是一系列网站模版。五六行配置即可实现一个简单的网站模版,然后我们有一个上层调度模块将会负责调起模版进行数据抓取。</li>
+<li>IP消重<br>需要消重的原因是程序运行到一定时间之后,大量IP都是数据库里面已经存在的了,这个时候如果在数据库进行消重逻辑将会导致大量数据库读写,实际上我们的服务器是一个1块钱的腾讯云(曾经是),看起来是撑不住这么大的请求的(平均每天可以有10K量级)。最后在入库前设置了一个bloomFilter消重模块,能够高效的检测资源是否被入库过。</li>
+<li>位置信息完善<br>这个逻辑不大,通过taobaoIp接口获取地址信息,完善IP资源元数据。<a href="http://ip.taobao.com/" target="_blank" rel="noopener">taobaoIP</a></li>
+<li>IP验证<br>IP验证分为好几个步骤。我们的IP总资源有80W,检验一个IP是否可用一般来说需要20秒左右的时间,因为代理IP本身响应比较慢,我们会把超时时间设置得比较长。所以可以计算一下80W数据走一轮将要消耗得时间,即使在多线程并行环境下时间也是很多的。为了在一定资源下完成校验,我们设计了如下步骤</li>
+</ol>
+<ul>
+<li>端口开启校验,在进行可用性校验前,首先需要检查IP端口是否开启。调研发现大量资源其实端口都不通,所以专门设计一个任务验证端口是否开启,端口开启验证超时时间为5秒。由于大多数资源端口都没有开启,所以大部分资源的校验时间下降到5秒了。</li>
+<li>可用性校验,进行可用性校验的需要先进行端口开启校验,系统中端口开启的资源大概3W,所以校验可用性的总资源有3W左右。可用性校验存在如下问题,很多代理IP其实不是代理网站,想他发送请求最终不是我们预期的数据,比如他返回给我们一个代理IP认证网页。所以我们不能根据是否能够请求到数据来判定IP是否可用。我们的做法是在公网放置一个API接口,然后控制代理IP访问我们自己的接口,如果能够拿到符合我们接口的预期数据,那么认为IP可用。</li>
+<li>domain可用该校验,可用性校验通过之后IP还不是真正可用,悲伤的发现代理IP是和域名相关的。所以同一个IP在不同域名下表现可能不一样。所以我们维护了一个域名IP池,这里面存储各个域名下可用IP</li>
+</ul>
+<ol start="5">
+<li>IP分发<br>IP分发是根据客户请求分配可用IP。分发逻辑现在还没有完全完善,但是已经实现了最迫切和有校的分发方案。分发逻辑设计是:先尝试查询domainIP池,再根据其他请求参数做条件匹配,再查询系统可用IP,再随机选择可用填充。四个步骤如果有一个步骤得到的IP超过请求参数期待数目,则不进行接下来的动作。</li>
+</ol>
+<h3 id="IP验证模型"><a href="#IP验证模型" class="headerlink" title="IP验证模型"></a>IP验证模型</h3><p>再IP验证的时候,我们设计了一个模型用来确定哪些IP应该优先验证。模型描述如下:长期可用IP检测频率低,长期不可用IP检测评率低。不稳定IP和刚加入的IP检测频率高。我们使用优先队列来实现这个逻辑,所有IP根据分值放在不同优先队列中,每次校验的时候再不同优先队列中拿出一定资源进行校验(不同优先级拿出的资源数目不一样,高优先级的对象拿出更多资源),对于同一个优先队列,我们根据最后验证时间排序。使上次更新时间最久的资源被优先选择。</p>
+<h3 id="分发去重"><a href="#分发去重" class="headerlink" title="分发去重"></a>分发去重</h3><p>分发资源的时候,设计去重问题,也就是根据相同条件,每次分发得到的IP很大可能会重复。为了规避这个问题,每次分发都会相应的下发一个资源签名,他会记录分发过的IP。在下次请求的时候,客户端需要带上这个签名,服务器会根据签名过滤,同时会重新对新分发的IP资源做再次签名.</p>
+<h2 id="server部署"><a href="#server部署" class="headerlink" title="server部署"></a>server部署</h2><p>server端使用java编写,使用maven管理项目,使用mysql作为数据库。相关技术包括springMVC,spring,tomcat,mybatis,guava,fastjson,httpclient等。<br>运行server的方式很简单</p>
+<ol>
+<li>在项目根目录执行maven命令(需要提前安装maven,maven安装方式略)<figure class="highlight plain"><figcaption><span>install -Dmaven.test.skip</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. 在server目录执行maven命令 ```mvn tomcat7:run</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="server配置"><a href="#server配置" class="headerlink" title="server配置"></a>server配置</h3><p>直接运行项目使用的是我们的默认数据库,同时使用的是默认配置。实际上server存在一些配置用来设置运行参数。合理的运行参数能够合理使用机器资源以及达到更好的运行效果。<br>项目主要有两个配置文件需要配置:</p>
+<ol>
+<li>mysql.properties 用来配置数据库信息</li>
+<li>config.properties 配置其他启动参数,主要需要关注里面几个url地址,还有 system.thread.<em>的参数项。system.thread</em>用于指定某一种类型的任务执行的线程数,如果数据小于1,则这个模块不会启动。但是如果这个模块接收到了任务请求,那么他会转发到其他服务器上面(也就是上面的两个forward相关的url,没办法服务器都是腊鸡服务器  )</li>
+</ol>
+<p>其他的应该没有了把,哦对了,项目存在多个profile,也就是resources.local,resources.beta,resources.prod等。他们叫做profile,是maven里面的概念,默认是resources.local生效的。如果想使用其他profile下面的配置,则增加 -Pprofile参数,如运行server <figure class="highlight plain"><figcaption><span>-Pskyee clean tomcat7:run```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### server接口事例</span><br><span class="line">[http://115.159.40.202:8080/proxyipcenter/av?usedSign=&amp;checkUrl=http%3A%2F%2Ffree-proxy-list.net%2F&amp;domain=free-proxy-list.net&amp;num=10](http://115.159.40.202:8080/proxyipcenter/av?usedSign=&amp;checkUrl=http%3A%2F%2Ffree-proxy-list.net%2F&amp;domain=free-proxy-list.net&amp;num=10)</span><br><span class="line">`</span><br></pre></td></tr></table></figure></p>
+<p>{<br>     “data”: {<br>         “data”: [<br>             {<br>                 “id”: 257,<br>                 “ip”: “203.192.12.148”,<br>                 “proxyIp”: “203.192.12.149”,<br>                 “port”: 80,<br>                 “ipValue”: 3418360980,<br>                 “country”: “中国”,<br>                 “area”: “华北”,<br>                 “region”: “北京市”,<br>                 “city”: “北京市”,<br>                 “isp”: “”,<br>                 “countryId”: “CN”,<br>                 “areaId”: “100000”,<br>                 “regionId”: “110000”,<br>                 “cityId”: “110100”,<br>                 “ispId”: “-1”,<br>                 “transperent”: 2,<br>                 “speed”: 104,<br>                 “type”: 1,<br>                 “connectionScore”: 1310,<br>                 “availbelScore”: 8,<br>                 “connectionScoreDate”: 1475641264000,<br>                 “availbelScoreDate”: 1475646860000,<br>                 “createtime”: 1473840886000,<br>                 “lostheader”: false<br>             },<br>             {<br>                 “id”: 654,<br>                 “ip”: “120.55.245.47”,<br>                 “proxyIp”: “112.124.119.21”,<br>                 “port”: 80,<br>                 “ipValue”: 2016933167,<br>                 “country”: “中国”,<br>                 “area”: “华东”,<br>                 “region”: “浙江省”,<br>                 “city”: “杭州市”,<br>                 “isp”: “阿里云”,<br>                 “countryId”: “CN”,<br>                 “areaId”: “300000”,<br>                 “regionId”: “330000”,<br>                 “cityId”: “330100”,<br>                 “ispId”: “1000323”,<br>                 “transperent”: 2,<br>                 “speed”: 83,<br>                 “type”: 1,<br>                 “connectionScore”: 1429,<br>                 “availbelScore”: 2,<br>                 “connectionScoreDate”: 1475659905000,<br>                 “availbelScoreDate”: 1475630273000,<br>                 “createtime”: 1473840884000,<br>                 “lostheader”: false<br>             },<br>             {<br>                 “id”: 2489,<br>                 “ip”: “124.193.33.233”,<br>                 “proxyIp”: “124.193.33.233”,<br>                 “port”: 3128,<br>                 “ipValue”: 2093031913,<br>                 “country”: “中国”,<br>                 “area”: “华北”,<br>                 “region”: “北京市”,<br>                 “city”: “北京市”,<br>                 “isp”: “鹏博士”,<br>                 “countryId”: “CN”,<br>                 “areaId”: “100000”,<br>                 “regionId”: “110000”,<br>                 “cityId”: “110100”,<br>                 “ispId”: “1000143”,<br>                 “transperent”: 2,<br>                 “speed”: 3390,<br>                 “type”: 1,<br>                 “connectionScore”: 310,<br>                 “availbelScore”: 2,<br>                 “connectionScoreDate”: 1475657685000,<br>                 “availbelScoreDate”: 1475661878000,<br>                 “createtime”: 1473839334000,<br>                 “lostheader”: false<br>             },<br>             {<br>                 “id”: 5004,<br>                 “ip”: “203.192.12.146”,<br>                 “proxyIp”: “203.192.12.149”,<br>                 “port”: 80,<br>                 “ipValue”: 3418360978,<br>                 “country”: “中国”,<br>                 “area”: “华北”,<br>                 “region”: “北京市”,<br>                 “city”: “北京市”,<br>                 “isp”: “”,<br>                 “countryId”: “CN”,<br>                 “areaId”: “100000”,<br>                 “regionId”: “110000”,<br>                 “cityId”: “110100”,<br>                 “ispId”: “-1”,<br>                 “transperent”: 2,<br>                 “speed”: 161,<br>                 “type”: 1,<br>                 “connectionScore”: 1291,<br>                 “availbelScore”: 10,<br>                 “connectionScoreDate”: 1475638336000,<br>                 “availbelScoreDate”: 1475636727000,<br>                 “createtime”: 1473840882000,<br>                 “lostheader”: false<br>             },<br>             {<br>                 “id”: 5421,<br>                 “ip”: “221.237.155.64”,<br>                 “proxyIp”: “221.237.155.64”,<br>                 “port”: 9797,<br>                 “ipValue”: 3723336512,<br>                 “country”: “中国”,<br>                 “area”: “西南”,<br>                 “region”: “四川省”,<br>                 “city”: “成都市”,<br>                 “isp”: “电信”,<br>                 “countryId”: “CN”,<br>                 “areaId”: “500000”,<br>                 “regionId”: “510000”,<br>                 “cityId”: “510100”,<br>                 “ispId”: “100017”,<br>                 “transperent”: 2,<br>                 “speed”: 3238,<br>                 “type”: 1,<br>                 “connectionScore”: 119,<br>                 “availbelScore”: -1,<br>                 “connectionScoreDate”: 1475611973000,<br>                 “availbelScoreDate”: 1475629954000,<br>                 “createtime”: 1473840773000,<br>                 “lostheader”: false<br>             },<br>             {<br>                 “id”: 8722,<br>                 “ip”: “58.243.0.162”,<br>                 “proxyIp”: “58.243.0.162”,<br>                 “port”: 9999,<br>                 “ipValue”: 989003938,<br>                 “country”: “中国”,<br>                 “area”: “华东”,<br>                 “region”: “安徽省”,<br>                 “city”: “安庆市”,<br>                 “isp”: “联通”,<br>                 “countryId”: “CN”,<br>                 “areaId”: “300000”,<br>                 “regionId”: “340000”,<br>                 “cityId”: “340800”,<br>                 “ispId”: “100026”,<br>                 “transperent”: 2,<br>                 “speed”: 5143,<br>                 “type”: 1,<br>                 “connectionScore”: 154,<br>                 “availbelScore”: -3,<br>                 “connectionScoreDate”: 1475665673000,<br>                 “availbelScoreDate”: 1475614147000,<br>                 “createtime”: 1473839836000,<br>                 “lostheader”: false<br>             },<br>             {<br>                 “id”: 11698,<br>                 “ip”: “218.7.170.190”,<br>                 “proxyIp”: “218.7.170.190”,<br>                 “port”: 3128,<br>                 “ipValue”: 3657935550,<br>                 “country”: “中国”,<br>                 “area”: “东北”,<br>                 “region”: “黑龙江省”,<br>                 “city”: “绥化市”,<br>                 “isp”: “联通”,<br>                 “countryId”: “CN”,<br>                 “areaId”: “200000”,<br>                 “regionId”: “230000”,<br>                 “cityId”: “231200”,<br>                 “ispId”: “100026”,<br>                 “transperent”: 2,<br>                 “speed”: 3145,<br>                 “type”: 1,<br>                 “connectionScore”: 317,<br>                 “availbelScore”: -1,<br>                 “connectionScoreDate”: 1475642001000,<br>                 “availbelScoreDate”: 1475524810000,<br>                 “createtime”: 1473839128000,<br>                 “lostheader”: false<br>             },<br>             {<br>                 “id”: 13318,<br>                 “ip”: “220.249.185.178”,<br>                 “proxyIp”: “220.249.185.178”,<br>                 “port”: 9999,<br>                 “ipValue”: 3707353522,<br>                 “country”: “中国”,<br>                 “area”: “华东”,<br>                 “region”: “福建省”,<br>                 “city”: “福州市”,<br>                 “isp”: “联通”,<br>                 “countryId”: “CN”,<br>                 “areaId”: “300000”,<br>                 “regionId”: “350000”,<br>                 “cityId”: “350100”,<br>                 “ispId”: “100026”,<br>                 “transperent”: 2,<br>                 “speed”: 5094,<br>                 “type”: 1,<br>                 “connectionScore”: 129,<br>                 “availbelScore”: -1,<br>                 “connectionScoreDate”: 1475615670000,<br>                 “availbelScoreDate”: 1475585178000,<br>                 “createtime”: 1473840539000,<br>                 “lostheader”: false<br>             },<br>             {<br>                 “id”: 57033,<br>                 “ip”: “210.245.25.228”,<br>                 “proxyIp”: “210.245.25.228”,<br>                 “port”: 3128,<br>                 “ipValue”: 3539278308,<br>                 “country”: “越南”,<br>                 “area”: “”,<br>                 “region”: “”,<br>                 “city”: “”,<br>                 “isp”: “”,<br>                 “countryId”: “VN”,<br>                 “areaId”: “”,<br>                 “regionId”: “”,<br>                 “cityId”: “”,<br>                 “ispId”: “”,<br>                 “transperent”: 2,<br>                 “speed”: 1024,<br>                 “type”: 1,<br>                 “connectionScore”: 488,<br>                 “availbelScore”: 36,<br>                 “connectionScoreDate”: 1475635386000,<br>                 “availbelScoreDate”: 1475630473000,<br>                 “createtime”: 1473836572000,<br>                 “lostheader”: false<br>             },<br>             {<br>                 “id”: 124334,<br>                 “ip”: “60.194.72.253”,<br>                 “proxyIp”: “60.194.72.253”,<br>                 “port”: 3128,<br>                 “ipValue”: 1019365629,<br>                 “country”: “中国”,<br>                 “area”: “华北”,<br>                 “region”: “北京市”,<br>                 “city”: “北京市”,<br>                 “isp”: “鹏博士”,<br>                 “countryId”: “CN”,<br>                 “areaId”: “100000”,<br>                 “regionId”: “110000”,<br>                 “cityId”: “110100”,<br>                 “ispId”: “1000143”,<br>                 “transperent”: 2,<br>                 “speed”: 2366,<br>                 “type”: 1,<br>                 “connectionScore”: 610,<br>                 “availbelScore”: 16,<br>                 “connectionScoreDate”: 1475643516000,<br>                 “availbelScoreDate”: 1475631080000,<br>                 “createtime”: 1473839561000,<br>                 “lostheader”: false<br>             }<br>         ],<br>         “num”: 10,<br>         “sign”: “9999#C99+999#9B99B99999##Y9999+9999999999999999999999t9999s99999999s9999999999999999999999999999#99999999999999GB999999999G9999s9s99999#9999999999Y9+999##99999999+99999999999999+999999999999B999+Y9999G9+99999999999YB99999999999999999999999+99Y999999999B9999G999s99G999999999#99999#9Y999s999999999#B99999999999999999999+999999Y9999999Y9999999999999Y9999Y999999999999999”<br>     },<br>     “status”: true<br> }<br><code></code></p>
+<h2 id="proxyipcenter-client"><a href="#proxyipcenter-client" class="headerlink" title="proxyipcenter client"></a>proxyipcenter client</h2><h3 id="client-设计文档"><a href="#client-设计文档" class="headerlink" title="client 设计文档"></a><a href="http://git.oschina.net/virjar/proxyipcenter/blob/master/doc/client/design/README.md" target="_blank" rel="noopener">client 设计文档</a></h3><h3 id="client-使用文档"><a href="#client-使用文档" class="headerlink" title="client 使用文档"></a><a href="http://git.oschina.net/virjar/proxyipcenter/blob/master/doc/client/userGuide/README.md" target="_blank" rel="noopener">client 使用文档</a></h3><p>client运行原理<br>这里讲述IP池的设计相关,如果您仅仅是为了使用dunproxy-client,则不必关心本文内容</p>
+<p>client就是一个代理IP池的实现,IP池的设计基于两个点:</p>
+<ol>
+<li><p>代理IP都是不稳定的,不可靠的,需要一个机制来切换IP,尽可能使用高质量IP。</p>
+</li>
+<li><p>IP和环境关系很大,同一个IP在不同的机器下访问不同的目标网站,其可用性表现都是不一样的</p>
+</li>
+</ol>
+<h2 id="使用IpPoolAPI获取IP资源"><a href="#使用IpPoolAPI获取IP资源" class="headerlink" title="使用IpPoolAPI获取IP资源"></a>使用IpPoolAPI获取IP资源</h2><h3 id="获取IP"><a href="#获取IP" class="headerlink" title="获取IP"></a>获取IP</h3><p>获取一个IP的方式是这样的 <code>IpPool.getInstance().bind(domain, accessUrl);</code> </p>
+<ul>
+<li>第一个参数是域名,可以传递null,传递null提取accessUrl schema里面的host</li>
+<li>第二个参数是你当前需要访问的url, 可以为null,为null时domain不能为空</li>
+</ul>
+<p>曾经有一个绑定用户的功能,使得同一个账户每次获取的IP相同,后来觉得是过度设计,因为对于抓取场景,切换IP是很普通的需求,而且貌似没有多少server会检查常用IP。就算有也是小众需求,本框架不必支持</p>
+<h3 id="记录IP使用"><a href="#记录IP使用" class="headerlink" title="记录IP使用"></a>记录IP使用</h3><p>每当使用IP的时候,需要记录一次IP使用,也就是将IP实例的使用次数加一,用于打分机制计算IP的使用分值,评估IP可用性<br>方式如下:<code>com.virjar.dungproxy.client.model.AvProxy.recordUsage</code></p>
+<h3 id="记录IP使用失败"><a href="#记录IP使用失败" class="headerlink" title="记录IP使用失败"></a>记录IP使用失败</h3><p>每当IP使用失败的时候,需要记录IP使用失败,也就是将IP实例的失败次数加一,用于打分机制计算IP的使用分值,评估IP可用性<br>方式如下:<code>com.virjar.dungproxy.client.model.AvProxy.recordFailed()</code></p>
+<h3 id="IP下线"><a href="#IP下线" class="headerlink" title="IP下线"></a>IP下线</h3><p>IP下线很简单,拿到IP实例,这样调用<code>com.virjar.dungproxy.client.model.AvProxy.offline()</code>。<br>一般情况不建议这么做,因为IP池会自动检查IP是否应该下线,IP池可以定制各种策略。当时,有些时候IP池的检查机制比较缓慢,而上层业务可以明确知道本IP不可用,这个时候可以使用本API强制下线</p>
+<h3 id="销毁IP池实例"><a href="#销毁IP池实例" class="headerlink" title="销毁IP池实例"></a>销毁IP池实例</h3><p>IP池是单例的,同时里面维护了两个任务线程,在业务完成的时候,需要销毁IP池才能终止内部线程。同时也会执行一些收尾工作,如将可用IP dump。<br>销毁方式是:<code>com.virjar.dungproxy.client.ippool.IpPool.destroy</code></p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>IP池有其他很多扩展点,但是目前接口没有开发完成,待后续完善</p>
+<h2 id="TODO-几个主流语言的客户端"><a href="#TODO-几个主流语言的客户端" class="headerlink" title="TODO 几个主流语言的客户端"></a>TODO 几个主流语言的客户端</h2><ol>
+<li>.NET/.NET core client (辣鸡楼主还没动手…)</li>
+<li>Python client(另外一个大佬好像忘了这事了…)</li>
+<li>Golang client(可能还是辣鸡楼主动手…)</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/开源/" rel="tag"># 开源</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/04/58CityHouseSearch_move_to_aspnetcore/" rel="next" title="58HouseSearch项目迁移到asp.net core">
+                <i class="fa fa-chevron-left"></i> 58HouseSearch项目迁移到asp.net core
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/14/visualstudio_shortcut_key/" rel="prev" title="VS快捷键">
+                VS快捷键 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">李国宝</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/liguobao" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#proxyipcenter的解决方案"><span class="nav-number">2.</span> <span class="nav-text">proxyipcenter的解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#proxyipcenter-server"><span class="nav-number">3.</span> <span class="nav-text">proxyipcenter server</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IP验证模型"><span class="nav-number">3.1.</span> <span class="nav-text">IP验证模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分发去重"><span class="nav-number">3.2.</span> <span class="nav-text">分发去重</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#server部署"><span class="nav-number">4.</span> <span class="nav-text">server部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#server配置"><span class="nav-number">4.1.</span> <span class="nav-text">server配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#proxyipcenter-client"><span class="nav-number">5.</span> <span class="nav-text">proxyipcenter client</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#client-设计文档"><span class="nav-number">5.1.</span> <span class="nav-text">client 设计文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#client-使用文档"><span class="nav-number">5.2.</span> <span class="nav-text">client 使用文档</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用IpPoolAPI获取IP资源"><span class="nav-number">6.</span> <span class="nav-text">使用IpPoolAPI获取IP资源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取IP"><span class="nav-number">6.1.</span> <span class="nav-text">获取IP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#记录IP使用"><span class="nav-number">6.2.</span> <span class="nav-text">记录IP使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#记录IP使用失败"><span class="nav-number">6.3.</span> <span class="nav-text">记录IP使用失败</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IP下线"><span class="nav-number">6.4.</span> <span class="nav-text">IP下线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#销毁IP池实例"><span class="nav-number">6.5.</span> <span class="nav-text">销毁IP池实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">6.6.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TODO-几个主流语言的客户端"><span class="nav-number">7.</span> <span class="nav-text">TODO 几个主流语言的客户端</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">李国宝</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
