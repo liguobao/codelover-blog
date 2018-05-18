@@ -2,7 +2,7 @@
 ---
 layout: post
 title: 手把手教你用Docker搭建Hexo博客
-category: dotnet core
+category: docker
 date: 2018-05-18
 tags:
 
