@@ -10,6 +10,8 @@ tags:
 ---
 # 用Visual Studio Code Debug世界上最好的语言
 
+Mac用户看这里:[用Visual Studio Code Debug世界上最好的语言(Mac篇)](https://zhuanlan.zhihu.com/p/37128419)
+
 ## 前言
 
 这阵子因缘巧合接手了一个辣鸡项目，是用世界上最好的拍黄片写的，项目基本是另一个小伙伴在撸码，我就兼职打杂和发布做点运维的工作。

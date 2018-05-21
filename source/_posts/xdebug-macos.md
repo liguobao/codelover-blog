@@ -2,7 +2,7 @@
 layout: post
 title: 用Visual Studio Code Debug世界上最好的语言(Mac篇)
 category: PHP
-date: 2016-10-04
+date: 2018-05-21
 tags:
 - Visual Studio Code
 - debug
@@ -12,6 +12,8 @@ tags:
 # 用Visual Studio Code Debug世界上最好的语言(Mac篇)
 
 首先,你要有台Macbook Pro,接着才继续看这个教程.
+
+PS:Windows用户看这里[用Visual Studio Code Debug世界上最好的语言](https://zhuanlan.zhihu.com/p/25844268)
 
 ## brew 环境准备
 
