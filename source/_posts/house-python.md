@@ -256,6 +256,7 @@ Python3环境,使用安装Flask,pymysql,BeautifulSoup
 pip install Flask;
 pip install pymysql;
 pip install beautifulsoup4;
+pip install requests;
 ```
 
 然后直接上代码咯.
