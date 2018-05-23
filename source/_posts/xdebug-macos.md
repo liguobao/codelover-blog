@@ -80,9 +80,15 @@ phpize;
 # ./configure --enable-xdebug --with-php-config=PHP安装路径/bin/php-config;
 ./configure --enable-xdebug --with-php-config=/usr/local/Cellar/php@7.1/7.1.17/bin/php-config;
 
-# 上一步正常执行完毕之后会在xdebug-2.6.0/modules/文件夹下生成xdebug.la和xdebug.so,待会我们在php.ini中配置xdebug会用到这个文件
+make;
+
+make test;
+
+# 上一步正常make执行完毕之后会在xdebug-2.6.0/modules/文件夹下生成xdebug.la和xdebug.so,待会我们在php.ini中配置xdebug会用到这个文件
 
 ```
+
+[https://www.techflirt.com/install-configure-xdebug-on-xampp-windows-and-mac/](https://www.techflirt.com/install-configure-xdebug-on-xampp-windows-and-mac/)
 
 ## 安装nginx
 
