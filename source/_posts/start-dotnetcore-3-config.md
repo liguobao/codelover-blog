@@ -142,19 +142,23 @@ tags:
         {
             services.AddMvc();
             //将Configuration注入到APPConfiguration实例中
-            services.AddOptions().Configure<APPConfiguration>(Configuration);
+            services.AddOptions().Configure<AppSettings>(Configuration);
         }
 ```
 
 然后我们在Controller中使用构造函数注入的方式获取APPConfiguration实例
 
 ```C#
-        private APPConfiguration configuration;
+        private AppSettings configuration;
 
-        public AccountController(IOptions<APPConfiguration> configurationOption)
+        public AccountController(IOptions<AppSettings> configurationOption)
         {
             this.configuration = configurationOption.Value;
         }
 ```
 
 然后就可以愉快的使用了.
+
+本文结束...
+
+拜...
