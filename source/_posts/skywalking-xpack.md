@@ -170,3 +170,11 @@ Docker 镜像名称:[liguobao/skywalking-docker](https://hub.docker.com/r/liguob
 - [quick start](../5.x/quick-start/README.md)
 
 
+## 后记
+
+本来还打算把代码提给主仓库的,但是wusheng 大大说xpack客户端和Apache要求的授权有冲突,遂...
+
+那就留着自己玩了.
+
+拜...
+
