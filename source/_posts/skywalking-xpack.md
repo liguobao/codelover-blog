@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 可能是全网首个支持阿里云Elasticsearch的Skywalking
+title: 可能是全网首个支持阿里云Elasticsearch Xapck鉴权的Skywalking
 category: API
 date: 2018-06-18
 tags:
@@ -9,7 +9,9 @@ tags:
 - Elasticsearch
 ---
 
-# 可能是全网首个支持阿里云Elasticsearch的Skywalking
+# 可能是全网首个支持阿里云Elasticsearch Xapck鉴权的Skywalking
+
+对Skywalking有兴趣的同学参见:[年轻人的第一个APM-Skywalking](https://zhuanlan.zhihu.com/p/45084693)
 
 之前在搭建Skywalking的时候发现,官方Skywalking 5.X并支持有鉴权的Elasticsearch.
 
