@@ -8,5 +8,5 @@ tags:
 ---
 # 同步博客到腾讯云社区声明
 
-![头像](http://7xrayk.com1.z0.glb.clouddn.com/QQ20180522-0.jpg)
+![头像](http://qiniudns.woyaozufang.live/QQ20180522-0.jpg)
 我的博客即将搬运同步至腾讯云+社区，邀请大家一同入驻：[https://cloud.tencent.com/developer/support-plan?invite_code=2wlwxlkrybgg8](https://cloud.tencent.com/developer/support-plan?invite_code=2wlwxlkrybgg8)

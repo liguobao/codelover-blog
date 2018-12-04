@@ -160,7 +160,7 @@ ls FirstApplication;
 
 直接看下Program.cs的代码:
 
-![代码1](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-29%20%E4%B8%8B%E5%8D%8810.51.02.png)
+![代码1](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-29%20%E4%B8%8B%E5%8D%8810.51.02.png)
 
 一句话输出"Hello World!"...
 
@@ -185,27 +185,27 @@ Hello World!
 
 VS Code左侧切到debug(一只虫子的图标),点击调试旁边的绿色按钮开始启动.
 
-![debug](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-29%20%E4%B8%8B%E5%8D%8810.57.46.png)
+![debug](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-29%20%E4%B8%8B%E5%8D%8810.57.46.png)
 
 终端输出:
 
-![终端](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-29%20%E4%B8%8B%E5%8D%8810.59.51.png)
+![终端](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-29%20%E4%B8%8B%E5%8D%8810.59.51.png)
 
 调试控制台输出:
 
-![控制台](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-29%20%E4%B8%8B%E5%8D%8811.00.51.png)
+![控制台](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-29%20%E4%B8%8B%E5%8D%8811.00.51.png)
 
 都说了Debug了,我们简单也做个debug断点调试.
 
 点击代码文件左侧黑色边栏,鼠标左键单击在第8,9行,对应位置出现断点(小红点),
 如下图:
-![断点](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-29%20%E4%B8%8B%E5%8D%8811.02.09.png)
+![断点](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-29%20%E4%B8%8B%E5%8D%8811.02.09.png)
 
 再次Debug运行程序.
 
 第8行位置出现黄色条纹,程序处于debug默认等待下一步操作.
 
-![debug](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-29%20%E4%B8%8B%E5%8D%8811.04.41.png)
+![debug](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-29%20%E4%B8%8B%E5%8D%8811.04.41.png)
 
 左侧可查看相关变量当前值,正上方有debug相关操作(F5继续,F10单步跳过,F11单步调试...)
 
@@ -252,10 +252,10 @@ The program '[32086] FirstApplication.dll' has exited with code 0 (0x0).
 
 在循环里面打个断点看看i的值和sum的值.
 
-![i+sum](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-29%20%E4%B8%8B%E5%8D%8811.17.06.png)
+![i+sum](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-29%20%E4%B8%8B%E5%8D%8811.17.06.png)
 
 鼠标移动到对应变量上.
-![鼠标移上去](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-29%20%E4%B8%8B%E5%8D%8811.17.49.png)
+![鼠标移上去](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-29%20%E4%B8%8B%E5%8D%8811.17.49.png)
 
 到这里,第一个dotnet core程序基本已经完成了,本教程结束....
 

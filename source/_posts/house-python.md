@@ -352,8 +352,8 @@ if __name__ == '__main__':
 
 效果图:
 
-![1](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-23%20%E4%B8%8A%E5%8D%888.07.52.png)
-![2](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-23%20%E4%B8%8A%E5%8D%888.08.19.png)
+![1](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-23%20%E4%B8%8A%E5%8D%888.07.52.png)
+![2](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-23%20%E4%B8%8A%E5%8D%888.08.19.png)
 
 然后...
 

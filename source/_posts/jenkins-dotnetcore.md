@@ -55,7 +55,7 @@ java -jar jenkins.war
 所以上面我先打开了tmux之后再跑java -jar jenkins.war.
 
 如下图:
-![jenkins启动](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%886.53.24.png)
+![jenkins启动](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%886.53.24.png)
 
 接着留意一下initialAdminPassword的输出
 
@@ -73,18 +73,18 @@ This may also be found at: /root/jenkins-home/secrets/initialAdminPassword
 
 这个时候把上面的XXXXXXXXXXXXXX复制出来,输进去点击继续配置jenkins账号密码信息之类的.
 
-![配置jenkins](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%886.58.58.png)
+![配置jenkins](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%886.58.58.png)
 
 接着安装默认插件.
 
-![安装插件](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%887.00.12.png)
+![安装插件](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%887.00.12.png)
 
 这里估计也要等几分钟不等,看你的机器性能和网络速度.
 
 安装好了之后会进入配置登录账号密码,安装提示配置就完事.
 
 最后进入jenkins页面是这样的.
-![jenkins](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%887.02.42.png)
+![jenkins](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%887.02.42.png)
 
 到现在我们已经把jenkins跑起来了,也有了一些常用的插件.
 
@@ -151,20 +151,20 @@ docker logs house-web;
 
 打开jenkins首页,左侧选择"新建任务"(newJob),如下图:
 
-![newJob](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.10.00.png)
+![newJob](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.10.00.png)
 
 给新的job取个名字,然后选择"构建自由风格的软件项目",如图:
 
-![构建自由风格的软件项目](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.12.27.png)
+![构建自由风格的软件项目](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.12.27.png)
 
 ### 添加源码仓库
 
 确认之后进入Job配置页面,源码管理里面选择git,如图:
-![源码管理](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.14.06.png)
+![源码管理](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.14.06.png)
 
 如果git仓库是需要权限的话需要配置一下权限,我一般简单粗暴直接把jenkins主机的公钥添加到git仓库里面,所以这里直接配置成'From the Jenkins master ~/.ssh',也可以用账号密码访问等等的.
 
-![git仓库权限配置](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.16.09.png)
+![git仓库权限配置](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.16.09.png)
 
 "Branch Specifier (blank for 'any')	"默认master分支,根据自己的需求填入不同的分支.
 
@@ -173,7 +173,7 @@ docker logs house-web;
 ### 构建
 
 点击"添加构建步骤",选择"Execute shell",然后能看到如下图:
-![Execute shell](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.22.45.png)
+![Execute shell](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.22.45.png)
 
 还记得我们上一步的脚本么?修改一下源码路径再放进去.
 
@@ -231,23 +231,23 @@ build过程比较慢而且还会产生镜像在本机or目标主机上,docker im
 
 接着选择"创建镜像仓库".
 
-![创建镜像仓库](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.51.25.png)
+![创建镜像仓库](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.51.25.png)
 
 选地区-选命名空间-填仓库名称(就是镜像名称)-填摘要-设置代码源(支持GitHub/阿里云code/Bitbucket/私有Gitlab/本地Git等等,给个授权就完事)
 
-![选地区](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.54.10.png)
+![选地区](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.54.10.png)
 
 构建设置选择"代码变更时自动构建镜像",然后选一下构建分支为你想要的分支,填入Dockerfile在源码中的路径,然后保存
-![构建分支](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.57.50.png)
+![构建分支](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%889.57.50.png)
 
 接着我们进入管理平台看一下.
 
-![aliyun-构建](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.00.51.png)
+![aliyun-构建](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.00.51.png)
 
 点击一下"立即构建",然后查看一下日志.
-![build 日志](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.02.00.png)
+![build 日志](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.02.00.png)
 
-![构建成功](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.02.49.png)
+![构建成功](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.02.49.png)
 
 这个时候,我们用docker pull registry-internal.cn-hangzhou.aliyuncs.com/你的命名空间/你的镜像名称 就可以拉到这个阿里云build成功的镜像了.
 
@@ -259,7 +259,7 @@ build过程比较慢而且还会产生镜像在本机or目标主机上,docker im
 
 我们看阿里云镜像构建服务里面,有一项是webhook的,官方介绍在这里:[阿里云-webhook管理](https://help.aliyun.com/document_detail/60949.html?spm=5176.8351553.0.0.645319912fjxim)
 
-![阿里云-webhook管理](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.08.45.png)
+![阿里云-webhook管理](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.08.45.png)
 
 这里就需要填入我们的webhook地址,还记得前面我无端端选择的第四种方案,然后让大家跟着安装的Generic Webhook Trigger插件么?
 
@@ -281,7 +281,7 @@ jenkins登录名和token在"账号-设置-API Token-Show API Token..."里面能�
 
 最后一个token参数其实就是"构建触发器"中"触发远程构建"的参数,建议使用job名字.这里的配置大概是这样的:
 
-![触发远程构建](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.21.13.png)
+![触发远程构建](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.21.13.png)
 
 最后我们还需要在jenkins全局安全设置中取消勾选“防止跨站点请求伪造（Prevent Cross Site Request Forgery exploits)"选项,这样阿里云webhook才能过得来.
 
@@ -289,7 +289,7 @@ jenkins登录名和token在"账号-设置-API Token-Show API Token..."里面能�
 如果对应的jenkins Job能正常开始执行,说明整个流程已经ok了.
 
 最后我们回到上面"阿里云-容器镜像服务-对应镜像仓库-webhook-添加记录"
-![webhook-添加记录](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.27.02.png)
+![webhook-添加记录](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-06%20%E4%B8%8B%E5%8D%8810.27.02.png)
 
 PS:webhook名称不要带特殊字符or "-"之类的,不然一直保存失败而且还不会提示你是因为名字不合法,下午被这个坑了半个小时.
 

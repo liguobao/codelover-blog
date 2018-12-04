@@ -47,7 +47,7 @@ FirsrMVC.csproj  Program.cs  Startup.cs  obj/  wwwroot/
 
 在VS Code中打开FirsrMVC文件夹,简单看一下文件和Program.cs的代码
 
-![文件列表](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-30%20%E4%B8%8A%E5%8D%887.42.08.png)
+![文件列表](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-30%20%E4%B8%8A%E5%8D%887.42.08.png)
 
 Program.cs依旧是Main主方法,然后调用了一下BuildWebHost方法,BuildWebHost返回一个IWebHost的实例,接着Run.
 
@@ -119,7 +119,7 @@ Application started. Press Ctrl+C to shut down.
 
 然后访问[http://localhost:5000](http://localhost:5000)看看.
 
-![localhost](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-30%20%E4%B8%8A%E5%8D%888.00.09.png)
+![localhost](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-30%20%E4%B8%8A%E5%8D%888.00.09.png)
 
 好了,第一个MVC程序已经跑起来了,本文结束.逃...
 
@@ -167,7 +167,7 @@ Application started. Press Ctrl+C to shut down.
 
 3. 访问[http://localhost:5000/first.html](http://localhost:5000/first.html)
 
-![first](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-30%20%E4%B8%8A%E5%8D%888.09.06.png)
+![first](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-30%20%E4%B8%8A%E5%8D%888.09.06.png)
 
 本步骤完成.
 
@@ -347,7 +347,7 @@ namespace FirsrMVC.Controllers
 
 刷新一下[http://localhost:5000/](http://localhost:5000/)页面.
 
-![View](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-30%20%E4%B8%8A%E5%8D%888.51.33.png)
+![View](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-30%20%E4%B8%8A%E5%8D%888.51.33.png)
 
 View文件也建立好了.
 
@@ -397,7 +397,7 @@ namespace FirsrMVC
 
 重新运行一下程序,访问[http://localhost:5000/](http://localhost:5000/)
 
-![index](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-30%20%E4%B8%8A%E5%8D%889.10.25.png)
+![index](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-30%20%E4%B8%8A%E5%8D%889.10.25.png)
 
 MVC结束.
 

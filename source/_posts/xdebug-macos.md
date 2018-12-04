@@ -264,7 +264,7 @@ xdebug.show_local_vars = 1
 
 然后就愉快debug最好的语言吧!
 
-![debug](http://7xrayk.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-21%20%E4%B8%8B%E5%8D%8810.16.58.png)
+![debug](http://qiniudns.woyaozufang.live/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-21%20%E4%B8%8B%E5%8D%8810.16.58.png)
 
 ## 其他部分
 

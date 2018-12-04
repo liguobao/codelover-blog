@@ -40,17 +40,17 @@ PPS:该去电影院还是多去电影院，毕竟美人良时可无价。
 
 以本文章想要爬取的dy2018.com为例,简单描述一下这个过程。dy2018.com主页如下图：
 
-![123](http://7xrayk.com1.z0.glb.clouddn.com/123.png)
+![123](http://qiniudns.woyaozufang.live/123.png)
 
 在chrome里面，按F12进入开发者模式，接着如下图使用鼠标选择对应页面数据，然后去分析页面HTML组成。
 
-![234](http://7xrayk.com1.z0.glb.clouddn.com/chromeF12_Select_HTML.png)
+![234](http://qiniudns.woyaozufang.live/chromeF12_Select_HTML.png)
 
 接着我们开始分析页面数据:
 
-![123](http://7xrayk.com1.z0.glb.clouddn.com/chrome_dy2018_lstmovie_divclass.png)
+![123](http://qiniudns.woyaozufang.live/chrome_dy2018_lstmovie_divclass.png)
 
-![123](http://7xrayk.com1.z0.glb.clouddn.com/chrome_dy2018_a.png)
+![123](http://qiniudns.woyaozufang.live/chrome_dy2018_a.png)
 
 经过简单分析HTML，我们得到以下结论：
 

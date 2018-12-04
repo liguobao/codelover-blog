@@ -88,10 +88,10 @@
 <meta property="og:description" content="手把手教你用.NET Core写爬虫写在前面自从上一个项目58HouseSearch从.NET迁移到.NET core之后，磕磕碰碰磨蹭了一个月才正式上线到新版本。然后最近又开了个新坑，搞了个Dy2018Crawler用来爬dy2018电影天堂上面的电影资源。这里也借机简单介绍一下如何基于.NET Core写一个爬虫。PS：如有偏错，敬请指明…PPS:该去电影院还是多去电影院，毕竟美人良时可无价。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://www.microsoft.com/net/images/screenshots/FileNewProject.png">
-<meta property="og:image" content="http://7xrayk.com1.z0.glb.clouddn.com/123.png">
-<meta property="og:image" content="http://7xrayk.com1.z0.glb.clouddn.com/chromeF12_Select_HTML.png">
-<meta property="og:image" content="http://7xrayk.com1.z0.glb.clouddn.com/chrome_dy2018_lstmovie_divclass.png">
-<meta property="og:image" content="http://7xrayk.com1.z0.glb.clouddn.com/chrome_dy2018_a.png">
+<meta property="og:image" content="http://qiniudns.woyaozufang.live/123.png">
+<meta property="og:image" content="http://qiniudns.woyaozufang.live/chromeF12_Select_HTML.png">
+<meta property="og:image" content="http://qiniudns.woyaozufang.live/chrome_dy2018_lstmovie_divclass.png">
+<meta property="og:image" content="http://qiniudns.woyaozufang.live/chrome_dy2018_a.png">
 <meta property="og:updated_time" content="2018-05-17T12:41:41.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手把手教你用.NET Core写爬虫">
@@ -368,12 +368,12 @@
 <h2 id="一个爬虫的自我修养"><a href="#一个爬虫的自我修养" class="headerlink" title="一个爬虫的自我修养"></a>一个爬虫的自我修养</h2><h3 id="分析网页"><a href="#分析网页" class="headerlink" title="分析网页"></a>分析网页</h3><p>写爬虫之前，我们首先要先去了解一下即将要爬取的网页数据组成。</p>
 <p>具体到网页的话，便是分析我们要抓取的数据在HTML里面是用什么标签抑或有什么样的标记，然后使用这个标记把数据从HTML中提取出来。在我这里的话，用的更多的是HTML标签的ID和CSS属性。</p>
 <p>以本文章想要爬取的dy2018.com为例,简单描述一下这个过程。dy2018.com主页如下图：</p>
-<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/123.png" alt="123"></p>
+<p><img src="http://qiniudns.woyaozufang.live/123.png" alt="123"></p>
 <p>在chrome里面，按F12进入开发者模式，接着如下图使用鼠标选择对应页面数据，然后去分析页面HTML组成。</p>
-<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/chromeF12_Select_HTML.png" alt="234"></p>
+<p><img src="http://qiniudns.woyaozufang.live/chromeF12_Select_HTML.png" alt="234"></p>
 <p>接着我们开始分析页面数据:</p>
-<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/chrome_dy2018_lstmovie_divclass.png" alt="123"></p>
-<p><img src="http://7xrayk.com1.z0.glb.clouddn.com/chrome_dy2018_a.png" alt="123"></p>
+<p><img src="http://qiniudns.woyaozufang.live/chrome_dy2018_lstmovie_divclass.png" alt="123"></p>
+<p><img src="http://qiniudns.woyaozufang.live/chrome_dy2018_a.png" alt="123"></p>
 <p>经过简单分析HTML，我们得到以下结论：</p>
 <ol>
 <li><p><a href="http://www.dy2018.com首页的电影数据存储在一个class为co_content222的div标签里面" target="_blank" rel="noopener">www.dy2018.com首页的电影数据存储在一个class为co_content222的div标签里面</a></p>
