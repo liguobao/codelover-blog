@@ -2,7 +2,7 @@
 layout: post
 title: .NET Core中使用RabbitMQ正确方式
 category: dotnet core
-date: 2018-12-29
+date: 2018-01-11
 tags:
 - dotnet core
 - 单元测试
